@@ -1,0 +1,1041 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9600E6BF14871AEC006A04D1 /* AMIPadIntroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600E6BD14871AEC006A04D1 /* AMIPadIntroController.m */; };
+		9600E6C014871AEC006A04D1 /* AMIPadIntroController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9600E6BE14871AEC006A04D1 /* AMIPadIntroController.xib */; };
+		9600E6C614871B53006A04D1 /* AMIPhoneMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600E6C414871B53006A04D1 /* AMIPhoneMainController.m */; };
+		9600E6C714871B53006A04D1 /* AMIPhoneMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9600E6C514871B53006A04D1 /* AMIPhoneMainController.xib */; };
+		9600E6CB14871B76006A04D1 /* AMIPhoneIntroController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600E6C914871B76006A04D1 /* AMIPhoneIntroController.m */; };
+		9600E6CC14871B76006A04D1 /* AMIPhoneIntroController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9600E6CA14871B76006A04D1 /* AMIPhoneIntroController.xib */; };
+		9600E6DC148721B7006A04D1 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9600E6DB148721B7006A04D1 /* CoreData.framework */; };
+		9600E72014872FC2006A04D1 /* SFHFKeychainUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 9600E71F14872FC2006A04D1 /* SFHFKeychainUtils.m */; };
+		9600E72214872FD0006A04D1 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9600E72114872FD0006A04D1 /* Security.framework */; };
+		9601A1E514A81820003DE0B0 /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1CD14A81820003DE0B0 /* NSObject+SBJson.m */; };
+		9601A1E614A81820003DE0B0 /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1D014A81820003DE0B0 /* SBJsonParser.m */; };
+		9601A1E714A81820003DE0B0 /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1D214A81820003DE0B0 /* SBJsonStreamParser.m */; };
+		9601A1E814A81820003DE0B0 /* SBJsonStreamParserAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1D414A81820003DE0B0 /* SBJsonStreamParserAccumulator.m */; };
+		9601A1E914A81820003DE0B0 /* SBJsonStreamParserAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1D614A81820003DE0B0 /* SBJsonStreamParserAdapter.m */; };
+		9601A1EA14A81820003DE0B0 /* SBJsonStreamParserState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1D814A81820003DE0B0 /* SBJsonStreamParserState.m */; };
+		9601A1EB14A81820003DE0B0 /* SBJsonStreamWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1DA14A81820003DE0B0 /* SBJsonStreamWriter.m */; };
+		9601A1EC14A81820003DE0B0 /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1DC14A81820003DE0B0 /* SBJsonStreamWriterAccumulator.m */; };
+		9601A1ED14A81820003DE0B0 /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1DE14A81820003DE0B0 /* SBJsonStreamWriterState.m */; };
+		9601A1EE14A81820003DE0B0 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1E014A81820003DE0B0 /* SBJsonTokeniser.m */; };
+		9601A1EF14A81820003DE0B0 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1E214A81820003DE0B0 /* SBJsonUTF8Stream.m */; };
+		9601A1F014A81820003DE0B0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1E414A81820003DE0B0 /* SBJsonWriter.m */; };
+		9635E41D14876245006CF9DD /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9635E41914876245006CF9DD /* CoreDataController.m */; };
+		9635E41E14876245006CF9DD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9635E41B14876245006CF9DD /* CoreDataManager.m */; };
+		964BC19614861E4100830181 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964BC19514861E4100830181 /* UIKit.framework */; };
+		964BC19814861E4100830181 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964BC19714861E4100830181 /* Foundation.framework */; };
+		964BC19A14861E4100830181 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964BC19914861E4100830181 /* CoreGraphics.framework */; };
+		964BC1A014861E4100830181 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 964BC19E14861E4100830181 /* InfoPlist.strings */; };
+		964BC1A214861E4100830181 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 964BC1A114861E4100830181 /* main.m */; };
+		964BC1A614861E4100830181 /* AMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 964BC1A514861E4100830181 /* AMAppDelegate.m */; };
+		964BC1D0148620B300830181 /* AMIPadMainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 964BC1CD148620B300830181 /* AMIPadMainController.m */; };
+		964BC1D9148620E600830181 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964BC1D7148620E600830181 /* StoreKit.framework */; };
+		964BC1DA148620E600830181 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964BC1D8148620E600830181 /* SystemConfiguration.framework */; };
+		9655ED62148A3E49001ACB21 /* iPad_AM_Tab_Intro.png in Resources */ = {isa = PBXBuildFile; fileRef = 9655ED5F148A3E49001ACB21 /* iPad_AM_Tab_Intro.png */; };
+		9655ED63148A3E49001ACB21 /* iPad_AM_Tab_Notification.png in Resources */ = {isa = PBXBuildFile; fileRef = 9655ED60148A3E49001ACB21 /* iPad_AM_Tab_Notification.png */; };
+		9655ED64148A3E49001ACB21 /* iPad_AM_Tab_Purchase.png in Resources */ = {isa = PBXBuildFile; fileRef = 9655ED61148A3E49001ACB21 /* iPad_AM_Tab_Purchase.png */; };
+		965912E8148B108200B34187 /* AMIPhoneLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965912E7148B108200B34187 /* AMIPhoneLoginView.m */; };
+		965912EB148B109D00B34187 /* AMIPhoneRegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965912EA148B109D00B34187 /* AMIPhoneRegistrationView.m */; };
+		965912EE148B10AE00B34187 /* AMIPhoneRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965912ED148B10AE00B34187 /* AMIPhoneRichView.m */; };
+		9663CD29149AFA5E00D3D94B /* AppBand.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9663CD26149AFA5E00D3D94B /* AppBand.bundle */; };
+		96B21EFB148B4D3400CC544A /* AMIPhonePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B21EF9148B4D3300CC544A /* AMIPhonePushController.m */; };
+		96B21EFC148B4D3400CC544A /* AMIPhonePushController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B21EFA148B4D3300CC544A /* AMIPhonePushController.xib */; };
+		96B21F00148B4D5A00CC544A /* AMIPhonePurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B21EFE148B4D5A00CC544A /* AMIPhonePurchaseController.m */; };
+		96B21F01148B4D5A00CC544A /* AMIPhonePurchaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B21EFF148B4D5A00CC544A /* AMIPhonePurchaseController.xib */; };
+		96B21F04148B4D8900CC544A /* AMIPhonePushCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B21F03148B4D8900CC544A /* AMIPhonePushCell.m */; };
+		96B21F07148B4DA700CC544A /* AMIPhoneProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B21F06148B4DA700CC544A /* AMIPhoneProductCell.m */; };
+		96B21F09148B4DC200CC544A /* AMIPhonePushCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B21F08148B4DC200CC544A /* AMIPhonePushCell.xib */; };
+		96B21F0B148B4DD500CC544A /* AMIPhoneProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B21F0A148B4DD500CC544A /* AMIPhoneProductCell.xib */; };
+		96B21F0F148B573200CC544A /* AMIPhoneProductShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B21F0D148B572F00CC544A /* AMIPhoneProductShowController.m */; };
+		96B21F10148B573200CC544A /* AMIPhoneProductShowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B21F0E148B573100CC544A /* AMIPhoneProductShowController.xib */; };
+		96D7B4CC14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96D7B4CA14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.m */; };
+		96D7B4CD14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96D7B4CB14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.xib */; };
+		96DA107014AEB3BB00E43576 /* AMDemoNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DA106F14AEB3BB00E43576 /* AMDemoNotification.m */; };
+		96DAE27614A1D6810022203F /* AMIPhoneSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DAE27414A1D6810022203F /* AMIPhoneSettingController.m */; };
+		96DAE27714A1D6810022203F /* AMIPhoneSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DAE27514A1D6810022203F /* AMIPhoneSettingController.xib */; };
+		96DAE27C14A1D69F0022203F /* AMIPadSettingController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DAE27A14A1D69F0022203F /* AMIPadSettingController.m */; };
+		96DAE27D14A1D69F0022203F /* AMIPadSettingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DAE27B14A1D69F0022203F /* AMIPadSettingController.xib */; };
+		96DB7C4314A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7C4214A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.m */; };
+		96DB7C4714A2CC75006DBDD6 /* AMIPadSettingAliasCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7C4614A2CC75006DBDD6 /* AMIPadSettingAliasCell.m */; };
+		96DB7C4914A2CC99006DBDD6 /* AMIPhoneSettingAliasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DB7C4814A2CC99006DBDD6 /* AMIPhoneSettingAliasCell.xib */; };
+		96DB7C4B14A2CF42006DBDD6 /* AMIPadSettingAliasCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DB7C4A14A2CF42006DBDD6 /* AMIPadSettingAliasCell.xib */; };
+		96DB7C4E14A2DB52006DBDD6 /* AMIPhoneSettingPushEnableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7C4D14A2DB52006DBDD6 /* AMIPhoneSettingPushEnableCell.m */; };
+		96DB7C5014A2DB61006DBDD6 /* AMIPhoneSettingPushEnableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DB7C4F14A2DB61006DBDD6 /* AMIPhoneSettingPushEnableCell.xib */; };
+		96DB7C5314A2E23D006DBDD6 /* AMIPadSettingPushEnableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7C5214A2E23D006DBDD6 /* AMIPadSettingPushEnableCell.m */; };
+		96DB7C5514A2E2BC006DBDD6 /* AMIPadSettingPushEnableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DB7C5414A2E2BC006DBDD6 /* AMIPadSettingPushEnableCell.xib */; };
+		96DB7C5814A310AA006DBDD6 /* AMIPhoneSettingPushIntervalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7C5714A310AA006DBDD6 /* AMIPhoneSettingPushIntervalCell.m */; };
+		96DB7C5A14A310BB006DBDD6 /* AMIPhoneSettingPushIntervalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DB7C5914A310BA006DBDD6 /* AMIPhoneSettingPushIntervalCell.xib */; };
+		96DB7C5D14A31340006DBDD6 /* AMIPadSettingPushIntervalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7C5C14A3133F006DBDD6 /* AMIPadSettingPushIntervalCell.m */; };
+		96DB7C5F14A31393006DBDD6 /* AMIPadSettingPushIntervalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DB7C5E14A31392006DBDD6 /* AMIPadSettingPushIntervalCell.xib */; };
+		96DB7C6314A31A81006DBDD6 /* AMIPhoneSettingPushIntervalController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96DB7C6114A31A7E006DBDD6 /* AMIPhoneSettingPushIntervalController.m */; };
+		96DB7C6414A31A81006DBDD6 /* AMIPhoneSettingPushIntervalController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96DB7C6214A31A7F006DBDD6 /* AMIPhoneSettingPushIntervalController.xib */; };
+		96E01EC3148A669F00C6E193 /* AMIPadProductShowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E01EC1148A669F00C6E193 /* AMIPadProductShowController.m */; };
+		96E01EC4148A669F00C6E193 /* AMIPadProductShowController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E01EC2148A669F00C6E193 /* AMIPadProductShowController.xib */; };
+		96E96DC11489D1790044E1A4 /* iPad_AM_Push_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DBE1489D1790044E1A4 /* iPad_AM_Push_Icon.png */; };
+		96E96DC21489D1790044E1A4 /* iPad_AM_Rich_Read_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DBF1489D1790044E1A4 /* iPad_AM_Rich_Read_Icon.png */; };
+		96E96DC31489D1790044E1A4 /* iPad_AM_Rich_Unread_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DC01489D1790044E1A4 /* iPad_AM_Rich_Unread_Icon.png */; };
+		96E96DC81489D1E90044E1A4 /* AMPushCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96DC71489D1E90044E1A4 /* AMPushCell.m */; };
+		96E96DCE1489DF330044E1A4 /* AMPushCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DCD1489DF330044E1A4 /* AMPushCell.xib */; };
+		96E96DD71489ED6D0044E1A4 /* AMProductCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96DD61489ED6D0044E1A4 /* AMProductCell.m */; };
+		96E96DD91489ED850044E1A4 /* AMProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DD81489ED850044E1A4 /* AMProductCell.xib */; };
+		96E96DDB1489F4760044E1A4 /* iPad_AM_Product_Cell_Price.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DDA1489F4740044E1A4 /* iPad_AM_Product_Cell_Price.png */; };
+		96E96DDD1489F47E0044E1A4 /* iPad_AM_Product_Cell_Installed.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DDC1489F47E0044E1A4 /* iPad_AM_Product_Cell_Installed.png */; };
+		96E96DDF1489F49E0044E1A4 /* iPad_AM_Product_Cell_Installed_zh.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DDE1489F49E0044E1A4 /* iPad_AM_Product_Cell_Installed_zh.png */; };
+		96E96DE21489F5730044E1A4 /* AMIPadRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96DE11489F5730044E1A4 /* AMIPadRichView.m */; };
+		96E96DE51489FB5D0044E1A4 /* iPad_AM_Rich_Bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DE31489FB580044E1A4 /* iPad_AM_Rich_Bg.png */; };
+		96E96DE61489FB5D0044E1A4 /* iPad_AM_Rich_Close.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DE41489FB590044E1A4 /* iPad_AM_Rich_Close.png */; };
+		96E96DF4148A1C5F0044E1A4 /* AMDemoProduct.m in Sources */ = {isa = PBXBuildFile; fileRef = 96E96DF3148A1C5E0044E1A4 /* AMDemoProduct.m */; };
+		96E96DF8148A233F0044E1A4 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DF5148A233A0044E1A4 /* Icon.png */; };
+		96E96DF9148A233F0044E1A4 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DF6148A233B0044E1A4 /* Icon@2x.png */; };
+		96E96DFA148A233F0044E1A4 /* iTunesArtWork in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DF7148A233D0044E1A4 /* iTunesArtWork */; };
+		96E96DFC148A23620044E1A4 /* iPad_AM_Introduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DFB148A23600044E1A4 /* iPad_AM_Introduction.png */; };
+		96E96DFE148A27670044E1A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E96DFD148A27660044E1A4 /* QuartzCore.framework */; };
+		96E96E00148A29BD0044E1A4 /* Icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DFF148A29BC0044E1A4 /* Icon_72x72.png */; };
+		96E96E02148A2A1C0044E1A4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96E01148A2A1B0044E1A4 /* Default.png */; };
+		96F46E74149AF6C70006C09E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E6A149AF6C70006C09E /* Reachability.m */; };
+		96F46E75149AF6C70006C09E /* xRestDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E6D149AF6C70006C09E /* xRestDownloadOperation.m */; };
+		96F46E76149AF6C70006C09E /* xRestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E70149AF6C70006C09E /* xRestManager.m */; };
+		96F46E77149AF6C70006C09E /* xRestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E72149AF6C70006C09E /* xRestOperation.m */; };
+		96FA37BC148874D3001AE559 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37BE148874D3001AE559 /* Localizable.strings */; };
+		96FA37C414887501001AE559 /* I18NController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA37C314887501001AE559 /* I18NController.m */; };
+		96FA37D1148877A1001AE559 /* AMIPadMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37D3148877A1001AE559 /* AMIPadMainController.xib */; };
+		96FA37E314887884001AE559 /* iPad_AM_Button_Introduction.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37D614887884001AE559 /* iPad_AM_Button_Introduction.png */; };
+		96FA37E514887884001AE559 /* iPad_AM_Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37D814887884001AE559 /* iPad_AM_Login.png */; };
+		96FA37E714887884001AE559 /* iPad_AM_Registration.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37DA14887884001AE559 /* iPad_AM_Registration.png */; };
+		96FA37E914887884001AE559 /* iPad_AM_Introduction_zh.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37DD14887884001AE559 /* iPad_AM_Introduction_zh.png */; };
+		96FA37EB14887884001AE559 /* iPad_AM_Login_zh.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37DF14887884001AE559 /* iPad_AM_Login_zh.png */; };
+		96FA37ED14887884001AE559 /* iPad_AM_Registration_zh.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37E114887884001AE559 /* iPad_AM_Registration_zh.png */; };
+		96FA37F1148878A7001AE559 /* AppMocha_Logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37EF148878A7001AE559 /* AppMocha_Logo@2x.png */; };
+		96FA37F714888085001AE559 /* AMIPadLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA37F614888085001AE559 /* AMIPadLoginView.m */; };
+		96FA37FA1488809A001AE559 /* AMIPadRegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA37F91488809A001AE559 /* AMIPadRegistrationView.m */; };
+		96FA37FC14888516001AE559 /* iPad_AM_Login_Bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37FB14888516001AE559 /* iPad_AM_Login_Bg.png */; };
+		96FA37FF14888CC0001AE559 /* iPad_AM_Registration_Bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37FE14888CC0001AE559 /* iPad_AM_Registration_Bg.png */; };
+		96FA380314888CCA001AE559 /* iPad_AM_Cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA380014888CCA001AE559 /* iPad_AM_Cancel.png */; };
+		96FA380414888CCA001AE559 /* iPad_AM_View_Login.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA380114888CCA001AE559 /* iPad_AM_View_Login.png */; };
+		96FA380514888CCA001AE559 /* iPad_AM_View_Registration.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA380214888CCA001AE559 /* iPad_AM_View_Registration.png */; };
+		96FA380914888CD5001AE559 /* iPad_AM_Cancel_zh.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA380614888CD5001AE559 /* iPad_AM_Cancel_zh.png */; };
+		96FA380A14888CD5001AE559 /* iPad_AM_View_Login_zh.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA380714888CD5001AE559 /* iPad_AM_View_Login_zh.png */; };
+		96FA380B14888CD5001AE559 /* iPad_AM_View_Registration_zh.png in Resources */ = {isa = PBXBuildFile; fileRef = 96FA380814888CD5001AE559 /* iPad_AM_View_Registration_zh.png */; };
+		96FA38261488C645001AE559 /* AMIPadPushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA38241488C644001AE559 /* AMIPadPushController.m */; };
+		96FA38271488C645001AE559 /* AMIPadPushController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FA38251488C645001AE559 /* AMIPadPushController.xib */; };
+		96FA382B1488C660001AE559 /* AMIPadPurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA38291488C65F001AE559 /* AMIPadPurchaseController.m */; };
+		96FA382C1488C660001AE559 /* AMIPadPurchaseController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FA382A1488C65F001AE559 /* AMIPadPurchaseController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		9600E6BC14871AEC006A04D1 /* AMIPadIntroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPadIntroController.h; sourceTree = "<group>"; };
+		9600E6BD14871AEC006A04D1 /* AMIPadIntroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPadIntroController.m; sourceTree = "<group>"; };
+		9600E6BE14871AEC006A04D1 /* AMIPadIntroController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPadIntroController.xib; sourceTree = "<group>"; };
+		9600E6C314871B53006A04D1 /* AMIPhoneMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneMainController.h; sourceTree = "<group>"; };
+		9600E6C414871B53006A04D1 /* AMIPhoneMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneMainController.m; sourceTree = "<group>"; };
+		9600E6C514871B53006A04D1 /* AMIPhoneMainController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneMainController.xib; sourceTree = "<group>"; };
+		9600E6C814871B76006A04D1 /* AMIPhoneIntroController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneIntroController.h; sourceTree = "<group>"; };
+		9600E6C914871B76006A04D1 /* AMIPhoneIntroController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneIntroController.m; sourceTree = "<group>"; };
+		9600E6CA14871B76006A04D1 /* AMIPhoneIntroController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneIntroController.xib; sourceTree = "<group>"; };
+		9600E6DB148721B7006A04D1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		9600E71E14872FC2006A04D1 /* SFHFKeychainUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFHFKeychainUtils.h; sourceTree = "<group>"; };
+		9600E71F14872FC2006A04D1 /* SFHFKeychainUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFHFKeychainUtils.m; sourceTree = "<group>"; };
+		9600E72114872FD0006A04D1 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9601A1CB14A81820003DE0B0 /* JSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
+		9601A1CC14A81820003DE0B0 /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
+		9601A1CD14A81820003DE0B0 /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
+		9601A1CE14A81820003DE0B0 /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
+		9601A1CF14A81820003DE0B0 /* SBJsonParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonParser.h; sourceTree = "<group>"; };
+		9601A1D014A81820003DE0B0 /* SBJsonParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonParser.m; sourceTree = "<group>"; };
+		9601A1D114A81820003DE0B0 /* SBJsonStreamParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParser.h; sourceTree = "<group>"; };
+		9601A1D214A81820003DE0B0 /* SBJsonStreamParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParser.m; sourceTree = "<group>"; };
+		9601A1D314A81820003DE0B0 /* SBJsonStreamParserAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAccumulator.h; sourceTree = "<group>"; };
+		9601A1D414A81820003DE0B0 /* SBJsonStreamParserAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAccumulator.m; sourceTree = "<group>"; };
+		9601A1D514A81820003DE0B0 /* SBJsonStreamParserAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserAdapter.h; sourceTree = "<group>"; };
+		9601A1D614A81820003DE0B0 /* SBJsonStreamParserAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserAdapter.m; sourceTree = "<group>"; };
+		9601A1D714A81820003DE0B0 /* SBJsonStreamParserState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamParserState.h; sourceTree = "<group>"; };
+		9601A1D814A81820003DE0B0 /* SBJsonStreamParserState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamParserState.m; sourceTree = "<group>"; };
+		9601A1D914A81820003DE0B0 /* SBJsonStreamWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriter.h; sourceTree = "<group>"; };
+		9601A1DA14A81820003DE0B0 /* SBJsonStreamWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriter.m; sourceTree = "<group>"; };
+		9601A1DB14A81820003DE0B0 /* SBJsonStreamWriterAccumulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterAccumulator.h; sourceTree = "<group>"; };
+		9601A1DC14A81820003DE0B0 /* SBJsonStreamWriterAccumulator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterAccumulator.m; sourceTree = "<group>"; };
+		9601A1DD14A81820003DE0B0 /* SBJsonStreamWriterState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonStreamWriterState.h; sourceTree = "<group>"; };
+		9601A1DE14A81820003DE0B0 /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
+		9601A1DF14A81820003DE0B0 /* SBJsonTokeniser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonTokeniser.h; sourceTree = "<group>"; };
+		9601A1E014A81820003DE0B0 /* SBJsonTokeniser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonTokeniser.m; sourceTree = "<group>"; };
+		9601A1E114A81820003DE0B0 /* SBJsonUTF8Stream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonUTF8Stream.h; sourceTree = "<group>"; };
+		9601A1E214A81820003DE0B0 /* SBJsonUTF8Stream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonUTF8Stream.m; sourceTree = "<group>"; };
+		9601A1E314A81820003DE0B0 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
+		9601A1E414A81820003DE0B0 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		961E6FFB148CAF3000902371 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/AMIPadMainController.xib"; sourceTree = "<group>"; };
+		9635E41814876245006CF9DD /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
+		9635E41914876245006CF9DD /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
+		9635E41A14876245006CF9DD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		9635E41B14876245006CF9DD /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		9635E41C14876245006CF9DD /* CoreDataProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataProtocol.h; sourceTree = "<group>"; };
+		964BC19114861E4100830181 /* AppMocha.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppMocha.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		964BC19514861E4100830181 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		964BC19714861E4100830181 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		964BC19914861E4100830181 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		964BC19D14861E4100830181 /* AppMocha-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AppMocha-Info.plist"; sourceTree = "<group>"; };
+		964BC19F14861E4100830181 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		964BC1A114861E4100830181 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		964BC1A414861E4100830181 /* AMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AMAppDelegate.h; sourceTree = "<group>"; };
+		964BC1A514861E4100830181 /* AMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AMAppDelegate.m; sourceTree = "<group>"; };
+		964BC1CC148620B300830181 /* AMIPadMainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPadMainController.h; sourceTree = "<group>"; };
+		964BC1CD148620B300830181 /* AMIPadMainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPadMainController.m; sourceTree = "<group>"; };
+		964BC1D7148620E600830181 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		964BC1D8148620E600830181 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		964BC1DD148621A100830181 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		9655ED5F148A3E49001ACB21 /* iPad_AM_Tab_Intro.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Tab_Intro.png; sourceTree = "<group>"; };
+		9655ED60148A3E49001ACB21 /* iPad_AM_Tab_Notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Tab_Notification.png; sourceTree = "<group>"; };
+		9655ED61148A3E49001ACB21 /* iPad_AM_Tab_Purchase.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Tab_Purchase.png; sourceTree = "<group>"; };
+		965912E6148B108200B34187 /* AMIPhoneLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneLoginView.h; sourceTree = "<group>"; };
+		965912E7148B108200B34187 /* AMIPhoneLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneLoginView.m; sourceTree = "<group>"; };
+		965912E9148B109D00B34187 /* AMIPhoneRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneRegistrationView.h; sourceTree = "<group>"; };
+		965912EA148B109D00B34187 /* AMIPhoneRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneRegistrationView.m; sourceTree = "<group>"; };
+		965912EC148B10AE00B34187 /* AMIPhoneRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneRichView.h; sourceTree = "<group>"; };
+		965912ED148B10AE00B34187 /* AMIPhoneRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneRichView.m; sourceTree = "<group>"; };
+		9663CD1A149AFA5E00D3D94B /* ABConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABConstant.h; sourceTree = "<group>"; };
+		9663CD1B149AFA5E00D3D94B /* ABNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABNotification.h; sourceTree = "<group>"; };
+		9663CD1C149AFA5E00D3D94B /* ABNotificationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABNotificationsResponse.h; sourceTree = "<group>"; };
+		9663CD1D149AFA5E00D3D94B /* ABProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABProduct.h; sourceTree = "<group>"; };
+		9663CD1E149AFA5E00D3D94B /* ABProductsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABProductsResponse.h; sourceTree = "<group>"; };
+		9663CD1F149AFA5E00D3D94B /* ABPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPurchase.h; sourceTree = "<group>"; };
+		9663CD20149AFA5E00D3D94B /* ABPurchaseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPurchaseResponse.h; sourceTree = "<group>"; };
+		9663CD21149AFA5E00D3D94B /* ABPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPush.h; sourceTree = "<group>"; };
+		9663CD24149AFA5E00D3D94B /* ABResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABResponse.h; sourceTree = "<group>"; };
+		9663CD25149AFA5E00D3D94B /* ABRichResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRichResponse.h; sourceTree = "<group>"; };
+		9663CD26149AFA5E00D3D94B /* AppBand.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppBand.bundle; sourceTree = "<group>"; };
+		9663CD27149AFA5E00D3D94B /* AppBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppBand.h; sourceTree = "<group>"; };
+		9663CD28149AFA5E00D3D94B /* AppBandKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppBandKit.h; sourceTree = "<group>"; };
+		96B21EF8148B4D3300CC544A /* AMIPhonePushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhonePushController.h; sourceTree = "<group>"; };
+		96B21EF9148B4D3300CC544A /* AMIPhonePushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhonePushController.m; sourceTree = "<group>"; };
+		96B21EFA148B4D3300CC544A /* AMIPhonePushController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhonePushController.xib; sourceTree = "<group>"; };
+		96B21EFD148B4D5A00CC544A /* AMIPhonePurchaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhonePurchaseController.h; sourceTree = "<group>"; };
+		96B21EFE148B4D5A00CC544A /* AMIPhonePurchaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhonePurchaseController.m; sourceTree = "<group>"; };
+		96B21EFF148B4D5A00CC544A /* AMIPhonePurchaseController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhonePurchaseController.xib; sourceTree = "<group>"; };
+		96B21F02148B4D8900CC544A /* AMIPhonePushCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhonePushCell.h; sourceTree = "<group>"; };
+		96B21F03148B4D8900CC544A /* AMIPhonePushCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhonePushCell.m; sourceTree = "<group>"; };
+		96B21F05148B4DA700CC544A /* AMIPhoneProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneProductCell.h; sourceTree = "<group>"; };
+		96B21F06148B4DA700CC544A /* AMIPhoneProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneProductCell.m; sourceTree = "<group>"; };
+		96B21F08148B4DC200CC544A /* AMIPhonePushCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhonePushCell.xib; sourceTree = "<group>"; };
+		96B21F0A148B4DD500CC544A /* AMIPhoneProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneProductCell.xib; sourceTree = "<group>"; };
+		96B21F0C148B572D00CC544A /* AMIPhoneProductShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneProductShowController.h; sourceTree = "<group>"; };
+		96B21F0D148B572F00CC544A /* AMIPhoneProductShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneProductShowController.m; sourceTree = "<group>"; };
+		96B21F0E148B573100CC544A /* AMIPhoneProductShowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneProductShowController.xib; sourceTree = "<group>"; };
+		96D7B4B414A369AE00F6D6C2 /* DateUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtility.h; sourceTree = "<group>"; };
+		96D7B4C914A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMIPadSettingPushIntervalController.h; path = AppMocha/Ipad/AMIPadSettingPushIntervalController.h; sourceTree = SOURCE_ROOT; };
+		96D7B4CA14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMIPadSettingPushIntervalController.m; path = AppMocha/Ipad/AMIPadSettingPushIntervalController.m; sourceTree = SOURCE_ROOT; };
+		96D7B4CB14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMIPadSettingPushIntervalController.xib; path = AppMocha/Ipad/AMIPadSettingPushIntervalController.xib; sourceTree = SOURCE_ROOT; };
+		96DA106E14AEB3BB00E43576 /* AMDemoNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDemoNotification.h; sourceTree = "<group>"; };
+		96DA106F14AEB3BB00E43576 /* AMDemoNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDemoNotification.m; sourceTree = "<group>"; };
+		96DAE27314A1D6810022203F /* AMIPhoneSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneSettingController.h; sourceTree = "<group>"; };
+		96DAE27414A1D6810022203F /* AMIPhoneSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneSettingController.m; sourceTree = "<group>"; };
+		96DAE27514A1D6810022203F /* AMIPhoneSettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneSettingController.xib; sourceTree = "<group>"; };
+		96DAE27914A1D69F0022203F /* AMIPadSettingController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMIPadSettingController.h; path = AppMocha/Ipad/AMIPadSettingController.h; sourceTree = SOURCE_ROOT; };
+		96DAE27A14A1D69F0022203F /* AMIPadSettingController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMIPadSettingController.m; path = AppMocha/Ipad/AMIPadSettingController.m; sourceTree = SOURCE_ROOT; };
+		96DAE27B14A1D69F0022203F /* AMIPadSettingController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMIPadSettingController.xib; path = AppMocha/Ipad/AMIPadSettingController.xib; sourceTree = SOURCE_ROOT; };
+		96DB7C4114A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneSettingAliasCell.h; sourceTree = "<group>"; };
+		96DB7C4214A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneSettingAliasCell.m; sourceTree = "<group>"; };
+		96DB7C4514A2CC75006DBDD6 /* AMIPadSettingAliasCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMIPadSettingAliasCell.h; path = AppMocha/Ipad/Cells/AMIPadSettingAliasCell.h; sourceTree = SOURCE_ROOT; };
+		96DB7C4614A2CC75006DBDD6 /* AMIPadSettingAliasCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMIPadSettingAliasCell.m; path = AppMocha/Ipad/Cells/AMIPadSettingAliasCell.m; sourceTree = SOURCE_ROOT; };
+		96DB7C4814A2CC99006DBDD6 /* AMIPhoneSettingAliasCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneSettingAliasCell.xib; sourceTree = "<group>"; };
+		96DB7C4A14A2CF42006DBDD6 /* AMIPadSettingAliasCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMIPadSettingAliasCell.xib; path = AppMocha/Ipad/Cells/AMIPadSettingAliasCell.xib; sourceTree = SOURCE_ROOT; };
+		96DB7C4C14A2DB52006DBDD6 /* AMIPhoneSettingPushEnableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneSettingPushEnableCell.h; sourceTree = "<group>"; };
+		96DB7C4D14A2DB52006DBDD6 /* AMIPhoneSettingPushEnableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneSettingPushEnableCell.m; sourceTree = "<group>"; };
+		96DB7C4F14A2DB61006DBDD6 /* AMIPhoneSettingPushEnableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneSettingPushEnableCell.xib; sourceTree = "<group>"; };
+		96DB7C5114A2E23D006DBDD6 /* AMIPadSettingPushEnableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMIPadSettingPushEnableCell.h; path = AppMocha/Ipad/Cells/AMIPadSettingPushEnableCell.h; sourceTree = SOURCE_ROOT; };
+		96DB7C5214A2E23D006DBDD6 /* AMIPadSettingPushEnableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMIPadSettingPushEnableCell.m; path = AppMocha/Ipad/Cells/AMIPadSettingPushEnableCell.m; sourceTree = SOURCE_ROOT; };
+		96DB7C5414A2E2BC006DBDD6 /* AMIPadSettingPushEnableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMIPadSettingPushEnableCell.xib; path = AppMocha/Ipad/Cells/AMIPadSettingPushEnableCell.xib; sourceTree = SOURCE_ROOT; };
+		96DB7C5614A310A9006DBDD6 /* AMIPhoneSettingPushIntervalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneSettingPushIntervalCell.h; sourceTree = "<group>"; };
+		96DB7C5714A310AA006DBDD6 /* AMIPhoneSettingPushIntervalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneSettingPushIntervalCell.m; sourceTree = "<group>"; };
+		96DB7C5914A310BA006DBDD6 /* AMIPhoneSettingPushIntervalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneSettingPushIntervalCell.xib; sourceTree = "<group>"; };
+		96DB7C5B14A3133E006DBDD6 /* AMIPadSettingPushIntervalCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMIPadSettingPushIntervalCell.h; path = AppMocha/Ipad/Cells/AMIPadSettingPushIntervalCell.h; sourceTree = SOURCE_ROOT; };
+		96DB7C5C14A3133F006DBDD6 /* AMIPadSettingPushIntervalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMIPadSettingPushIntervalCell.m; path = AppMocha/Ipad/Cells/AMIPadSettingPushIntervalCell.m; sourceTree = SOURCE_ROOT; };
+		96DB7C5E14A31392006DBDD6 /* AMIPadSettingPushIntervalCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMIPadSettingPushIntervalCell.xib; path = AppMocha/Ipad/Cells/AMIPadSettingPushIntervalCell.xib; sourceTree = SOURCE_ROOT; };
+		96DB7C6014A31A7D006DBDD6 /* AMIPhoneSettingPushIntervalController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneSettingPushIntervalController.h; sourceTree = "<group>"; };
+		96DB7C6114A31A7E006DBDD6 /* AMIPhoneSettingPushIntervalController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneSettingPushIntervalController.m; sourceTree = "<group>"; };
+		96DB7C6214A31A7F006DBDD6 /* AMIPhoneSettingPushIntervalController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhoneSettingPushIntervalController.xib; sourceTree = "<group>"; };
+		96E01EC0148A669F00C6E193 /* AMIPadProductShowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AMIPadProductShowController.h; path = AppMocha/iPad/AMIPadProductShowController.h; sourceTree = SOURCE_ROOT; };
+		96E01EC1148A669F00C6E193 /* AMIPadProductShowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AMIPadProductShowController.m; path = AppMocha/iPad/AMIPadProductShowController.m; sourceTree = SOURCE_ROOT; };
+		96E01EC2148A669F00C6E193 /* AMIPadProductShowController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = AMIPadProductShowController.xib; path = AppMocha/iPad/AMIPadProductShowController.xib; sourceTree = SOURCE_ROOT; };
+		96E96DBE1489D1790044E1A4 /* iPad_AM_Push_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Push_Icon.png; sourceTree = "<group>"; };
+		96E96DBF1489D1790044E1A4 /* iPad_AM_Rich_Read_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Rich_Read_Icon.png; sourceTree = "<group>"; };
+		96E96DC01489D1790044E1A4 /* iPad_AM_Rich_Unread_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Rich_Unread_Icon.png; sourceTree = "<group>"; };
+		96E96DC61489D1E90044E1A4 /* AMPushCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMPushCell.h; sourceTree = "<group>"; };
+		96E96DC71489D1E90044E1A4 /* AMPushCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMPushCell.m; sourceTree = "<group>"; };
+		96E96DCD1489DF330044E1A4 /* AMPushCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMPushCell.xib; sourceTree = "<group>"; };
+		96E96DD51489ED6D0044E1A4 /* AMProductCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMProductCell.h; sourceTree = "<group>"; };
+		96E96DD61489ED6D0044E1A4 /* AMProductCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMProductCell.m; sourceTree = "<group>"; };
+		96E96DD81489ED850044E1A4 /* AMProductCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMProductCell.xib; sourceTree = "<group>"; };
+		96E96DDA1489F4740044E1A4 /* iPad_AM_Product_Cell_Price.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Product_Cell_Price.png; sourceTree = "<group>"; };
+		96E96DDC1489F47E0044E1A4 /* iPad_AM_Product_Cell_Installed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Product_Cell_Installed.png; sourceTree = "<group>"; };
+		96E96DDE1489F49E0044E1A4 /* iPad_AM_Product_Cell_Installed_zh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iPad_AM_Product_Cell_Installed_zh.png; path = AppMocha/Resources/Image/iPad/zh/iPad_AM_Product_Cell_Installed_zh.png; sourceTree = SOURCE_ROOT; };
+		96E96DE01489F5730044E1A4 /* AMIPadRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPadRichView.h; sourceTree = "<group>"; };
+		96E96DE11489F5730044E1A4 /* AMIPadRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPadRichView.m; sourceTree = "<group>"; };
+		96E96DE31489FB580044E1A4 /* iPad_AM_Rich_Bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Rich_Bg.png; sourceTree = "<group>"; };
+		96E96DE41489FB590044E1A4 /* iPad_AM_Rich_Close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Rich_Close.png; sourceTree = "<group>"; };
+		96E96DF2148A1C5E0044E1A4 /* AMDemoProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMDemoProduct.h; sourceTree = "<group>"; };
+		96E96DF3148A1C5E0044E1A4 /* AMDemoProduct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMDemoProduct.m; sourceTree = "<group>"; };
+		96E96DF5148A233A0044E1A4 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		96E96DF6148A233B0044E1A4 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		96E96DF7148A233D0044E1A4 /* iTunesArtWork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtWork; sourceTree = "<group>"; };
+		96E96DFB148A23600044E1A4 /* iPad_AM_Introduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Introduction.png; sourceTree = "<group>"; };
+		96E96DFD148A27660044E1A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		96E96DFF148A29BC0044E1A4 /* Icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_72x72.png; sourceTree = "<group>"; };
+		96E96E01148A2A1B0044E1A4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		96F46E69149AF6C70006C09E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		96F46E6A149AF6C70006C09E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		96F46E6B149AF6C70006C09E /* xRestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestConstants.h; sourceTree = "<group>"; };
+		96F46E6C149AF6C70006C09E /* xRestDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestDownloadOperation.h; sourceTree = "<group>"; };
+		96F46E6D149AF6C70006C09E /* xRestDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestDownloadOperation.m; sourceTree = "<group>"; };
+		96F46E6E149AF6C70006C09E /* xRestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestKit.h; sourceTree = "<group>"; };
+		96F46E6F149AF6C70006C09E /* xRestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestManager.h; sourceTree = "<group>"; };
+		96F46E70149AF6C70006C09E /* xRestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestManager.m; sourceTree = "<group>"; };
+		96F46E71149AF6C70006C09E /* xRestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestOperation.h; sourceTree = "<group>"; };
+		96F46E72149AF6C70006C09E /* xRestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestOperation.m; sourceTree = "<group>"; };
+		96F46E73149AF6C70006C09E /* xRestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestProtocol.h; sourceTree = "<group>"; };
+		96FA37BD148874D3001AE559 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		96FA37C1148874DE001AE559 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		96FA37C214887501001AE559 /* I18NController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I18NController.h; sourceTree = "<group>"; };
+		96FA37C314887501001AE559 /* I18NController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = I18NController.m; sourceTree = "<group>"; };
+		96FA37D2148877A1001AE559 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/AMIPadMainController.xib; sourceTree = "<group>"; };
+		96FA37D614887884001AE559 /* iPad_AM_Button_Introduction.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Button_Introduction.png; sourceTree = "<group>"; };
+		96FA37D814887884001AE559 /* iPad_AM_Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Login.png; sourceTree = "<group>"; };
+		96FA37DA14887884001AE559 /* iPad_AM_Registration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Registration.png; sourceTree = "<group>"; };
+		96FA37DD14887884001AE559 /* iPad_AM_Introduction_zh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Introduction_zh.png; sourceTree = "<group>"; };
+		96FA37DF14887884001AE559 /* iPad_AM_Login_zh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Login_zh.png; sourceTree = "<group>"; };
+		96FA37E114887884001AE559 /* iPad_AM_Registration_zh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Registration_zh.png; sourceTree = "<group>"; };
+		96FA37EF148878A7001AE559 /* AppMocha_Logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppMocha_Logo@2x.png"; sourceTree = "<group>"; };
+		96FA37F314887B93001AE559 /* AppMocha-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppMocha-Prefix.pch"; sourceTree = "<group>"; };
+		96FA37F514888085001AE559 /* AMIPadLoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPadLoginView.h; sourceTree = "<group>"; };
+		96FA37F614888085001AE559 /* AMIPadLoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPadLoginView.m; sourceTree = "<group>"; };
+		96FA37F81488809A001AE559 /* AMIPadRegistrationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPadRegistrationView.h; sourceTree = "<group>"; };
+		96FA37F91488809A001AE559 /* AMIPadRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPadRegistrationView.m; sourceTree = "<group>"; };
+		96FA37FB14888516001AE559 /* iPad_AM_Login_Bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Login_Bg.png; sourceTree = "<group>"; };
+		96FA37FE14888CC0001AE559 /* iPad_AM_Registration_Bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Registration_Bg.png; sourceTree = "<group>"; };
+		96FA380014888CCA001AE559 /* iPad_AM_Cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Cancel.png; sourceTree = "<group>"; };
+		96FA380114888CCA001AE559 /* iPad_AM_View_Login.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_View_Login.png; sourceTree = "<group>"; };
+		96FA380214888CCA001AE559 /* iPad_AM_View_Registration.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_View_Registration.png; sourceTree = "<group>"; };
+		96FA380614888CD5001AE559 /* iPad_AM_Cancel_zh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_Cancel_zh.png; sourceTree = "<group>"; };
+		96FA380714888CD5001AE559 /* iPad_AM_View_Login_zh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_View_Login_zh.png; sourceTree = "<group>"; };
+		96FA380814888CD5001AE559 /* iPad_AM_View_Registration_zh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iPad_AM_View_Registration_zh.png; sourceTree = "<group>"; };
+		96FA38231488C644001AE559 /* AMIPadPushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPadPushController.h; sourceTree = "<group>"; };
+		96FA38241488C644001AE559 /* AMIPadPushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPadPushController.m; sourceTree = "<group>"; };
+		96FA38251488C645001AE559 /* AMIPadPushController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPadPushController.xib; sourceTree = "<group>"; };
+		96FA38281488C65E001AE559 /* AMIPadPurchaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPadPurchaseController.h; sourceTree = "<group>"; };
+		96FA38291488C65F001AE559 /* AMIPadPurchaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPadPurchaseController.m; sourceTree = "<group>"; };
+		96FA382A1488C65F001AE559 /* AMIPadPurchaseController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPadPurchaseController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		964BC18E14861E4100830181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96E96DFE148A27670044E1A4 /* QuartzCore.framework in Frameworks */,
+				9600E72214872FD0006A04D1 /* Security.framework in Frameworks */,
+				9600E6DC148721B7006A04D1 /* CoreData.framework in Frameworks */,
+				964BC1D9148620E600830181 /* StoreKit.framework in Frameworks */,
+				964BC1DA148620E600830181 /* SystemConfiguration.framework in Frameworks */,
+				964BC19614861E4100830181 /* UIKit.framework in Frameworks */,
+				964BC19814861E4100830181 /* Foundation.framework in Frameworks */,
+				964BC19A14861E4100830181 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9600E6C214871B3D006A04D1 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				965912E3148B101400B34187 /* Cells */,
+				965912E4148B101400B34187 /* Views */,
+				9600E6C314871B53006A04D1 /* AMIPhoneMainController.h */,
+				9600E6C414871B53006A04D1 /* AMIPhoneMainController.m */,
+				9600E6C514871B53006A04D1 /* AMIPhoneMainController.xib */,
+				9600E6C814871B76006A04D1 /* AMIPhoneIntroController.h */,
+				9600E6C914871B76006A04D1 /* AMIPhoneIntroController.m */,
+				9600E6CA14871B76006A04D1 /* AMIPhoneIntroController.xib */,
+				96B21EF8148B4D3300CC544A /* AMIPhonePushController.h */,
+				96B21EF9148B4D3300CC544A /* AMIPhonePushController.m */,
+				96B21EFA148B4D3300CC544A /* AMIPhonePushController.xib */,
+				96B21EFD148B4D5A00CC544A /* AMIPhonePurchaseController.h */,
+				96B21EFE148B4D5A00CC544A /* AMIPhonePurchaseController.m */,
+				96B21EFF148B4D5A00CC544A /* AMIPhonePurchaseController.xib */,
+				96B21F0C148B572D00CC544A /* AMIPhoneProductShowController.h */,
+				96B21F0D148B572F00CC544A /* AMIPhoneProductShowController.m */,
+				96B21F0E148B573100CC544A /* AMIPhoneProductShowController.xib */,
+				96DAE27314A1D6810022203F /* AMIPhoneSettingController.h */,
+				96DAE27414A1D6810022203F /* AMIPhoneSettingController.m */,
+				96DAE27514A1D6810022203F /* AMIPhoneSettingController.xib */,
+				96DB7C6014A31A7D006DBDD6 /* AMIPhoneSettingPushIntervalController.h */,
+				96DB7C6114A31A7E006DBDD6 /* AMIPhoneSettingPushIntervalController.m */,
+				96DB7C6214A31A7F006DBDD6 /* AMIPhoneSettingPushIntervalController.xib */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		9600E71D14872F83006A04D1 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				9601A1C914A8180F003DE0B0 /* Json */,
+				96D7B4B414A369AE00F6D6C2 /* DateUtility.h */,
+				96FA37C214887501001AE559 /* I18NController.h */,
+				96FA37C314887501001AE559 /* I18NController.m */,
+				9635E41814876245006CF9DD /* CoreDataController.h */,
+				9635E41914876245006CF9DD /* CoreDataController.m */,
+				9635E41A14876245006CF9DD /* CoreDataManager.h */,
+				9635E41B14876245006CF9DD /* CoreDataManager.m */,
+				9635E41C14876245006CF9DD /* CoreDataProtocol.h */,
+				9600E71E14872FC2006A04D1 /* SFHFKeychainUtils.h */,
+				9600E71F14872FC2006A04D1 /* SFHFKeychainUtils.m */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		9601A1C914A8180F003DE0B0 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				9601A1CB14A81820003DE0B0 /* JSON.h */,
+				9601A1CC14A81820003DE0B0 /* NSObject+SBJson.h */,
+				9601A1CD14A81820003DE0B0 /* NSObject+SBJson.m */,
+				9601A1CE14A81820003DE0B0 /* SBJson.h */,
+				9601A1CF14A81820003DE0B0 /* SBJsonParser.h */,
+				9601A1D014A81820003DE0B0 /* SBJsonParser.m */,
+				9601A1D114A81820003DE0B0 /* SBJsonStreamParser.h */,
+				9601A1D214A81820003DE0B0 /* SBJsonStreamParser.m */,
+				9601A1D314A81820003DE0B0 /* SBJsonStreamParserAccumulator.h */,
+				9601A1D414A81820003DE0B0 /* SBJsonStreamParserAccumulator.m */,
+				9601A1D514A81820003DE0B0 /* SBJsonStreamParserAdapter.h */,
+				9601A1D614A81820003DE0B0 /* SBJsonStreamParserAdapter.m */,
+				9601A1D714A81820003DE0B0 /* SBJsonStreamParserState.h */,
+				9601A1D814A81820003DE0B0 /* SBJsonStreamParserState.m */,
+				9601A1D914A81820003DE0B0 /* SBJsonStreamWriter.h */,
+				9601A1DA14A81820003DE0B0 /* SBJsonStreamWriter.m */,
+				9601A1DB14A81820003DE0B0 /* SBJsonStreamWriterAccumulator.h */,
+				9601A1DC14A81820003DE0B0 /* SBJsonStreamWriterAccumulator.m */,
+				9601A1DD14A81820003DE0B0 /* SBJsonStreamWriterState.h */,
+				9601A1DE14A81820003DE0B0 /* SBJsonStreamWriterState.m */,
+				9601A1DF14A81820003DE0B0 /* SBJsonTokeniser.h */,
+				9601A1E014A81820003DE0B0 /* SBJsonTokeniser.m */,
+				9601A1E114A81820003DE0B0 /* SBJsonUTF8Stream.h */,
+				9601A1E214A81820003DE0B0 /* SBJsonUTF8Stream.m */,
+				9601A1E314A81820003DE0B0 /* SBJsonWriter.h */,
+				9601A1E414A81820003DE0B0 /* SBJsonWriter.m */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		964BC18614861E4100830181 = {
+			isa = PBXGroup;
+			children = (
+				9663CD19149AFA5E00D3D94B /* AppBand */,
+				964BC19B14861E4100830181 /* AppMocha */,
+				964BC19414861E4100830181 /* Frameworks */,
+				964BC19214861E4100830181 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		964BC19214861E4100830181 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				964BC19114861E4100830181 /* AppMocha.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		964BC19414861E4100830181 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				96E96DFD148A27660044E1A4 /* QuartzCore.framework */,
+				9600E72114872FD0006A04D1 /* Security.framework */,
+				9600E6DB148721B7006A04D1 /* CoreData.framework */,
+				964BC1D7148620E600830181 /* StoreKit.framework */,
+				964BC1D8148620E600830181 /* SystemConfiguration.framework */,
+				964BC19514861E4100830181 /* UIKit.framework */,
+				964BC19714861E4100830181 /* Foundation.framework */,
+				964BC19914861E4100830181 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		964BC19B14861E4100830181 /* AppMocha */ = {
+			isa = PBXGroup;
+			children = (
+				96F46E68149AF6C70006C09E /* xRestKit */,
+				96FA37A7148872F9001AE559 /* Resources */,
+				9600E71D14872F83006A04D1 /* Utility */,
+				9600E6C214871B3D006A04D1 /* iPhone */,
+				964BC1CB148620B300830181 /* iPad */,
+				964BC1C514861F6100830181 /* Models */,
+				964BC1A414861E4100830181 /* AMAppDelegate.h */,
+				964BC1A514861E4100830181 /* AMAppDelegate.m */,
+				964BC19C14861E4100830181 /* Supporting Files */,
+			);
+			path = AppMocha;
+			sourceTree = "<group>";
+		};
+		964BC19C14861E4100830181 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96FA37F314887B93001AE559 /* AppMocha-Prefix.pch */,
+				964BC19D14861E4100830181 /* AppMocha-Info.plist */,
+				964BC19E14861E4100830181 /* InfoPlist.strings */,
+				964BC1A114861E4100830181 /* main.m */,
+				96FA37BE148874D3001AE559 /* Localizable.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		964BC1C514861F6100830181 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				96E96DF2148A1C5E0044E1A4 /* AMDemoProduct.h */,
+				96E96DF3148A1C5E0044E1A4 /* AMDemoProduct.m */,
+				96DA106E14AEB3BB00E43576 /* AMDemoNotification.h */,
+				96DA106F14AEB3BB00E43576 /* AMDemoNotification.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		964BC1CB148620B300830181 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				96E96DC51489D1CF0044E1A4 /* Cells */,
+				96FA37F414888063001AE559 /* Views */,
+				96E01EC0148A669F00C6E193 /* AMIPadProductShowController.h */,
+				96E01EC1148A669F00C6E193 /* AMIPadProductShowController.m */,
+				96E01EC2148A669F00C6E193 /* AMIPadProductShowController.xib */,
+				964BC1CC148620B300830181 /* AMIPadMainController.h */,
+				964BC1CD148620B300830181 /* AMIPadMainController.m */,
+				96FA37D3148877A1001AE559 /* AMIPadMainController.xib */,
+				9600E6BC14871AEC006A04D1 /* AMIPadIntroController.h */,
+				9600E6BD14871AEC006A04D1 /* AMIPadIntroController.m */,
+				9600E6BE14871AEC006A04D1 /* AMIPadIntroController.xib */,
+				96FA38231488C644001AE559 /* AMIPadPushController.h */,
+				96FA38241488C644001AE559 /* AMIPadPushController.m */,
+				96FA38251488C645001AE559 /* AMIPadPushController.xib */,
+				96FA38281488C65E001AE559 /* AMIPadPurchaseController.h */,
+				96FA38291488C65F001AE559 /* AMIPadPurchaseController.m */,
+				96FA382A1488C65F001AE559 /* AMIPadPurchaseController.xib */,
+				96DAE27914A1D69F0022203F /* AMIPadSettingController.h */,
+				96DAE27A14A1D69F0022203F /* AMIPadSettingController.m */,
+				96DAE27B14A1D69F0022203F /* AMIPadSettingController.xib */,
+				96D7B4C914A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.h */,
+				96D7B4CA14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.m */,
+				96D7B4CB14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.xib */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		965912E3148B101400B34187 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96B21F02148B4D8900CC544A /* AMIPhonePushCell.h */,
+				96B21F03148B4D8900CC544A /* AMIPhonePushCell.m */,
+				96B21F08148B4DC200CC544A /* AMIPhonePushCell.xib */,
+				96B21F05148B4DA700CC544A /* AMIPhoneProductCell.h */,
+				96B21F06148B4DA700CC544A /* AMIPhoneProductCell.m */,
+				96B21F0A148B4DD500CC544A /* AMIPhoneProductCell.xib */,
+				96DB7C4114A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.h */,
+				96DB7C4214A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.m */,
+				96DB7C4814A2CC99006DBDD6 /* AMIPhoneSettingAliasCell.xib */,
+				96DB7C4C14A2DB52006DBDD6 /* AMIPhoneSettingPushEnableCell.h */,
+				96DB7C4D14A2DB52006DBDD6 /* AMIPhoneSettingPushEnableCell.m */,
+				96DB7C4F14A2DB61006DBDD6 /* AMIPhoneSettingPushEnableCell.xib */,
+				96DB7C5614A310A9006DBDD6 /* AMIPhoneSettingPushIntervalCell.h */,
+				96DB7C5714A310AA006DBDD6 /* AMIPhoneSettingPushIntervalCell.m */,
+				96DB7C5914A310BA006DBDD6 /* AMIPhoneSettingPushIntervalCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		965912E4148B101400B34187 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				965912E6148B108200B34187 /* AMIPhoneLoginView.h */,
+				965912E7148B108200B34187 /* AMIPhoneLoginView.m */,
+				965912E9148B109D00B34187 /* AMIPhoneRegistrationView.h */,
+				965912EA148B109D00B34187 /* AMIPhoneRegistrationView.m */,
+				965912EC148B10AE00B34187 /* AMIPhoneRichView.h */,
+				965912ED148B10AE00B34187 /* AMIPhoneRichView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9663CD19149AFA5E00D3D94B /* AppBand */ = {
+			isa = PBXGroup;
+			children = (
+				9663CD1A149AFA5E00D3D94B /* ABConstant.h */,
+				9663CD1B149AFA5E00D3D94B /* ABNotification.h */,
+				9663CD1C149AFA5E00D3D94B /* ABNotificationsResponse.h */,
+				9663CD1D149AFA5E00D3D94B /* ABProduct.h */,
+				9663CD1E149AFA5E00D3D94B /* ABProductsResponse.h */,
+				9663CD1F149AFA5E00D3D94B /* ABPurchase.h */,
+				9663CD20149AFA5E00D3D94B /* ABPurchaseResponse.h */,
+				9663CD21149AFA5E00D3D94B /* ABPush.h */,
+				9663CD24149AFA5E00D3D94B /* ABResponse.h */,
+				9663CD25149AFA5E00D3D94B /* ABRichResponse.h */,
+				9663CD26149AFA5E00D3D94B /* AppBand.bundle */,
+				9663CD27149AFA5E00D3D94B /* AppBand.h */,
+				9663CD28149AFA5E00D3D94B /* AppBandKit.h */,
+			);
+			name = AppBand;
+			path = ../../../../../release/AppBand;
+			sourceTree = "<group>";
+		};
+		96E96DC51489D1CF0044E1A4 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				96E96DC61489D1E90044E1A4 /* AMPushCell.h */,
+				96E96DC71489D1E90044E1A4 /* AMPushCell.m */,
+				96E96DCD1489DF330044E1A4 /* AMPushCell.xib */,
+				96E96DD51489ED6D0044E1A4 /* AMProductCell.h */,
+				96E96DD61489ED6D0044E1A4 /* AMProductCell.m */,
+				96E96DD81489ED850044E1A4 /* AMProductCell.xib */,
+				96DB7C4514A2CC75006DBDD6 /* AMIPadSettingAliasCell.h */,
+				96DB7C4614A2CC75006DBDD6 /* AMIPadSettingAliasCell.m */,
+				96DB7C4A14A2CF42006DBDD6 /* AMIPadSettingAliasCell.xib */,
+				96DB7C5114A2E23D006DBDD6 /* AMIPadSettingPushEnableCell.h */,
+				96DB7C5214A2E23D006DBDD6 /* AMIPadSettingPushEnableCell.m */,
+				96DB7C5414A2E2BC006DBDD6 /* AMIPadSettingPushEnableCell.xib */,
+				96DB7C5B14A3133E006DBDD6 /* AMIPadSettingPushIntervalCell.h */,
+				96DB7C5C14A3133F006DBDD6 /* AMIPadSettingPushIntervalCell.m */,
+				96DB7C5E14A31392006DBDD6 /* AMIPadSettingPushIntervalCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		96F46E68149AF6C70006C09E /* xRestKit */ = {
+			isa = PBXGroup;
+			children = (
+				96F46E69149AF6C70006C09E /* Reachability.h */,
+				96F46E6A149AF6C70006C09E /* Reachability.m */,
+				96F46E6B149AF6C70006C09E /* xRestConstants.h */,
+				96F46E6C149AF6C70006C09E /* xRestDownloadOperation.h */,
+				96F46E6D149AF6C70006C09E /* xRestDownloadOperation.m */,
+				96F46E6E149AF6C70006C09E /* xRestKit.h */,
+				96F46E6F149AF6C70006C09E /* xRestManager.h */,
+				96F46E70149AF6C70006C09E /* xRestManager.m */,
+				96F46E71149AF6C70006C09E /* xRestOperation.h */,
+				96F46E72149AF6C70006C09E /* xRestOperation.m */,
+				96F46E73149AF6C70006C09E /* xRestProtocol.h */,
+			);
+			name = xRestKit;
+			path = ../../../../../../../IoT/Labs/OpenSource/xRestKit/xRestKit;
+			sourceTree = "<group>";
+		};
+		96FA37A7148872F9001AE559 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				96FA37A8148872F9001AE559 /* Image */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		96FA37A8148872F9001AE559 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				96E96E01148A2A1B0044E1A4 /* Default.png */,
+				96E96DFF148A29BC0044E1A4 /* Icon_72x72.png */,
+				96E96DF5148A233A0044E1A4 /* Icon.png */,
+				96E96DF6148A233B0044E1A4 /* Icon@2x.png */,
+				96E96DF7148A233D0044E1A4 /* iTunesArtWork */,
+				96FA37A9148872F9001AE559 /* iPad */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		96FA37A9148872F9001AE559 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				9655ED5F148A3E49001ACB21 /* iPad_AM_Tab_Intro.png */,
+				9655ED60148A3E49001ACB21 /* iPad_AM_Tab_Notification.png */,
+				9655ED61148A3E49001ACB21 /* iPad_AM_Tab_Purchase.png */,
+				96E96DFB148A23600044E1A4 /* iPad_AM_Introduction.png */,
+				96E96DE31489FB580044E1A4 /* iPad_AM_Rich_Bg.png */,
+				96E96DE41489FB590044E1A4 /* iPad_AM_Rich_Close.png */,
+				96E96DDA1489F4740044E1A4 /* iPad_AM_Product_Cell_Price.png */,
+				96E96DBE1489D1790044E1A4 /* iPad_AM_Push_Icon.png */,
+				96E96DBF1489D1790044E1A4 /* iPad_AM_Rich_Read_Icon.png */,
+				96E96DC01489D1790044E1A4 /* iPad_AM_Rich_Unread_Icon.png */,
+				96FA37FE14888CC0001AE559 /* iPad_AM_Registration_Bg.png */,
+				96FA37FB14888516001AE559 /* iPad_AM_Login_Bg.png */,
+				96FA37EF148878A7001AE559 /* AppMocha_Logo@2x.png */,
+				96FA37D514887884001AE559 /* en */,
+				96FA37DC14887884001AE559 /* zh */,
+			);
+			path = iPad;
+			sourceTree = "<group>";
+		};
+		96FA37D514887884001AE559 /* en */ = {
+			isa = PBXGroup;
+			children = (
+				96E96DDC1489F47E0044E1A4 /* iPad_AM_Product_Cell_Installed.png */,
+				96FA380014888CCA001AE559 /* iPad_AM_Cancel.png */,
+				96FA380114888CCA001AE559 /* iPad_AM_View_Login.png */,
+				96FA380214888CCA001AE559 /* iPad_AM_View_Registration.png */,
+				96FA37D614887884001AE559 /* iPad_AM_Button_Introduction.png */,
+				96FA37D814887884001AE559 /* iPad_AM_Login.png */,
+				96FA37DA14887884001AE559 /* iPad_AM_Registration.png */,
+			);
+			path = en;
+			sourceTree = "<group>";
+		};
+		96FA37DC14887884001AE559 /* zh */ = {
+			isa = PBXGroup;
+			children = (
+				96E96DDE1489F49E0044E1A4 /* iPad_AM_Product_Cell_Installed_zh.png */,
+				96FA380614888CD5001AE559 /* iPad_AM_Cancel_zh.png */,
+				96FA380714888CD5001AE559 /* iPad_AM_View_Login_zh.png */,
+				96FA380814888CD5001AE559 /* iPad_AM_View_Registration_zh.png */,
+				96FA37DD14887884001AE559 /* iPad_AM_Introduction_zh.png */,
+				96FA37DF14887884001AE559 /* iPad_AM_Login_zh.png */,
+				96FA37E114887884001AE559 /* iPad_AM_Registration_zh.png */,
+			);
+			path = zh;
+			sourceTree = "<group>";
+		};
+		96FA37F414888063001AE559 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				96FA37F514888085001AE559 /* AMIPadLoginView.h */,
+				96FA37F614888085001AE559 /* AMIPadLoginView.m */,
+				96FA37F81488809A001AE559 /* AMIPadRegistrationView.h */,
+				96FA37F91488809A001AE559 /* AMIPadRegistrationView.m */,
+				96E96DE01489F5730044E1A4 /* AMIPadRichView.h */,
+				96E96DE11489F5730044E1A4 /* AMIPadRichView.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		964BC19014861E4100830181 /* AppMocha */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 964BC1B214861E4100830181 /* Build configuration list for PBXNativeTarget "AppMocha" */;
+			buildPhases = (
+				964BC18D14861E4100830181 /* Sources */,
+				964BC18E14861E4100830181 /* Frameworks */,
+				964BC18F14861E4100830181 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AppMocha;
+			productName = AppMocha;
+			productReference = 964BC19114861E4100830181 /* AppMocha.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		964BC18814861E4100830181 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = 964BC18B14861E4100830181 /* Build configuration list for PBXProject "AppMocha" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 964BC18614861E4100830181;
+			productRefGroup = 964BC19214861E4100830181 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				964BC19014861E4100830181 /* AppMocha */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		964BC18F14861E4100830181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				964BC1A014861E4100830181 /* InfoPlist.strings in Resources */,
+				96FA37D1148877A1001AE559 /* AMIPadMainController.xib in Resources */,
+				9600E6C014871AEC006A04D1 /* AMIPadIntroController.xib in Resources */,
+				9600E6C714871B53006A04D1 /* AMIPhoneMainController.xib in Resources */,
+				9600E6CC14871B76006A04D1 /* AMIPhoneIntroController.xib in Resources */,
+				96FA37BC148874D3001AE559 /* Localizable.strings in Resources */,
+				96FA37E314887884001AE559 /* iPad_AM_Button_Introduction.png in Resources */,
+				96FA37E514887884001AE559 /* iPad_AM_Login.png in Resources */,
+				96FA37E714887884001AE559 /* iPad_AM_Registration.png in Resources */,
+				96FA37E914887884001AE559 /* iPad_AM_Introduction_zh.png in Resources */,
+				96FA37EB14887884001AE559 /* iPad_AM_Login_zh.png in Resources */,
+				96FA37ED14887884001AE559 /* iPad_AM_Registration_zh.png in Resources */,
+				96FA37F1148878A7001AE559 /* AppMocha_Logo@2x.png in Resources */,
+				96FA37FC14888516001AE559 /* iPad_AM_Login_Bg.png in Resources */,
+				96FA37FF14888CC0001AE559 /* iPad_AM_Registration_Bg.png in Resources */,
+				96FA380314888CCA001AE559 /* iPad_AM_Cancel.png in Resources */,
+				96FA380414888CCA001AE559 /* iPad_AM_View_Login.png in Resources */,
+				96FA380514888CCA001AE559 /* iPad_AM_View_Registration.png in Resources */,
+				96FA380914888CD5001AE559 /* iPad_AM_Cancel_zh.png in Resources */,
+				96FA380A14888CD5001AE559 /* iPad_AM_View_Login_zh.png in Resources */,
+				96FA380B14888CD5001AE559 /* iPad_AM_View_Registration_zh.png in Resources */,
+				96FA38271488C645001AE559 /* AMIPadPushController.xib in Resources */,
+				96FA382C1488C660001AE559 /* AMIPadPurchaseController.xib in Resources */,
+				96E96DC11489D1790044E1A4 /* iPad_AM_Push_Icon.png in Resources */,
+				96E96DC21489D1790044E1A4 /* iPad_AM_Rich_Read_Icon.png in Resources */,
+				96E96DC31489D1790044E1A4 /* iPad_AM_Rich_Unread_Icon.png in Resources */,
+				96E96DCE1489DF330044E1A4 /* AMPushCell.xib in Resources */,
+				96E96DD91489ED850044E1A4 /* AMProductCell.xib in Resources */,
+				96E96DDB1489F4760044E1A4 /* iPad_AM_Product_Cell_Price.png in Resources */,
+				96E96DDD1489F47E0044E1A4 /* iPad_AM_Product_Cell_Installed.png in Resources */,
+				96E96DDF1489F49E0044E1A4 /* iPad_AM_Product_Cell_Installed_zh.png in Resources */,
+				96E96DE51489FB5D0044E1A4 /* iPad_AM_Rich_Bg.png in Resources */,
+				96E96DE61489FB5D0044E1A4 /* iPad_AM_Rich_Close.png in Resources */,
+				96E96DF8148A233F0044E1A4 /* Icon.png in Resources */,
+				96E96DF9148A233F0044E1A4 /* Icon@2x.png in Resources */,
+				96E96DFA148A233F0044E1A4 /* iTunesArtWork in Resources */,
+				96E96DFC148A23620044E1A4 /* iPad_AM_Introduction.png in Resources */,
+				96E96E00148A29BD0044E1A4 /* Icon_72x72.png in Resources */,
+				96E96E02148A2A1C0044E1A4 /* Default.png in Resources */,
+				9655ED62148A3E49001ACB21 /* iPad_AM_Tab_Intro.png in Resources */,
+				9655ED63148A3E49001ACB21 /* iPad_AM_Tab_Notification.png in Resources */,
+				9655ED64148A3E49001ACB21 /* iPad_AM_Tab_Purchase.png in Resources */,
+				96E01EC4148A669F00C6E193 /* AMIPadProductShowController.xib in Resources */,
+				96B21EFC148B4D3400CC544A /* AMIPhonePushController.xib in Resources */,
+				96B21F01148B4D5A00CC544A /* AMIPhonePurchaseController.xib in Resources */,
+				96B21F09148B4DC200CC544A /* AMIPhonePushCell.xib in Resources */,
+				96B21F0B148B4DD500CC544A /* AMIPhoneProductCell.xib in Resources */,
+				96B21F10148B573200CC544A /* AMIPhoneProductShowController.xib in Resources */,
+				9663CD29149AFA5E00D3D94B /* AppBand.bundle in Resources */,
+				96DAE27714A1D6810022203F /* AMIPhoneSettingController.xib in Resources */,
+				96DAE27D14A1D69F0022203F /* AMIPadSettingController.xib in Resources */,
+				96DB7C4914A2CC99006DBDD6 /* AMIPhoneSettingAliasCell.xib in Resources */,
+				96DB7C4B14A2CF42006DBDD6 /* AMIPadSettingAliasCell.xib in Resources */,
+				96DB7C5014A2DB61006DBDD6 /* AMIPhoneSettingPushEnableCell.xib in Resources */,
+				96DB7C5514A2E2BC006DBDD6 /* AMIPadSettingPushEnableCell.xib in Resources */,
+				96DB7C5A14A310BB006DBDD6 /* AMIPhoneSettingPushIntervalCell.xib in Resources */,
+				96DB7C5F14A31393006DBDD6 /* AMIPadSettingPushIntervalCell.xib in Resources */,
+				96DB7C6414A31A81006DBDD6 /* AMIPhoneSettingPushIntervalController.xib in Resources */,
+				96D7B4CD14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		964BC18D14861E4100830181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				964BC1A214861E4100830181 /* main.m in Sources */,
+				964BC1A614861E4100830181 /* AMAppDelegate.m in Sources */,
+				964BC1D0148620B300830181 /* AMIPadMainController.m in Sources */,
+				9600E6BF14871AEC006A04D1 /* AMIPadIntroController.m in Sources */,
+				9600E6C614871B53006A04D1 /* AMIPhoneMainController.m in Sources */,
+				9600E6CB14871B76006A04D1 /* AMIPhoneIntroController.m in Sources */,
+				9600E72014872FC2006A04D1 /* SFHFKeychainUtils.m in Sources */,
+				9635E41D14876245006CF9DD /* CoreDataController.m in Sources */,
+				9635E41E14876245006CF9DD /* CoreDataManager.m in Sources */,
+				96FA37C414887501001AE559 /* I18NController.m in Sources */,
+				96FA37F714888085001AE559 /* AMIPadLoginView.m in Sources */,
+				96FA37FA1488809A001AE559 /* AMIPadRegistrationView.m in Sources */,
+				96FA38261488C645001AE559 /* AMIPadPushController.m in Sources */,
+				96FA382B1488C660001AE559 /* AMIPadPurchaseController.m in Sources */,
+				96E96DC81489D1E90044E1A4 /* AMPushCell.m in Sources */,
+				96E96DD71489ED6D0044E1A4 /* AMProductCell.m in Sources */,
+				96E96DE21489F5730044E1A4 /* AMIPadRichView.m in Sources */,
+				96E96DF4148A1C5F0044E1A4 /* AMDemoProduct.m in Sources */,
+				96E01EC3148A669F00C6E193 /* AMIPadProductShowController.m in Sources */,
+				965912E8148B108200B34187 /* AMIPhoneLoginView.m in Sources */,
+				965912EB148B109D00B34187 /* AMIPhoneRegistrationView.m in Sources */,
+				965912EE148B10AE00B34187 /* AMIPhoneRichView.m in Sources */,
+				96B21EFB148B4D3400CC544A /* AMIPhonePushController.m in Sources */,
+				96B21F00148B4D5A00CC544A /* AMIPhonePurchaseController.m in Sources */,
+				96B21F04148B4D8900CC544A /* AMIPhonePushCell.m in Sources */,
+				96B21F07148B4DA700CC544A /* AMIPhoneProductCell.m in Sources */,
+				96B21F0F148B573200CC544A /* AMIPhoneProductShowController.m in Sources */,
+				96F46E74149AF6C70006C09E /* Reachability.m in Sources */,
+				96F46E75149AF6C70006C09E /* xRestDownloadOperation.m in Sources */,
+				96F46E76149AF6C70006C09E /* xRestManager.m in Sources */,
+				96F46E77149AF6C70006C09E /* xRestOperation.m in Sources */,
+				96DAE27614A1D6810022203F /* AMIPhoneSettingController.m in Sources */,
+				96DAE27C14A1D69F0022203F /* AMIPadSettingController.m in Sources */,
+				96DB7C4314A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.m in Sources */,
+				96DB7C4714A2CC75006DBDD6 /* AMIPadSettingAliasCell.m in Sources */,
+				96DB7C4E14A2DB52006DBDD6 /* AMIPhoneSettingPushEnableCell.m in Sources */,
+				96DB7C5314A2E23D006DBDD6 /* AMIPadSettingPushEnableCell.m in Sources */,
+				96DB7C5814A310AA006DBDD6 /* AMIPhoneSettingPushIntervalCell.m in Sources */,
+				96DB7C5D14A31340006DBDD6 /* AMIPadSettingPushIntervalCell.m in Sources */,
+				96DB7C6314A31A81006DBDD6 /* AMIPhoneSettingPushIntervalController.m in Sources */,
+				96D7B4CC14A37A4C00F6D6C2 /* AMIPadSettingPushIntervalController.m in Sources */,
+				9601A1E514A81820003DE0B0 /* NSObject+SBJson.m in Sources */,
+				9601A1E614A81820003DE0B0 /* SBJsonParser.m in Sources */,
+				9601A1E714A81820003DE0B0 /* SBJsonStreamParser.m in Sources */,
+				9601A1E814A81820003DE0B0 /* SBJsonStreamParserAccumulator.m in Sources */,
+				9601A1E914A81820003DE0B0 /* SBJsonStreamParserAdapter.m in Sources */,
+				9601A1EA14A81820003DE0B0 /* SBJsonStreamParserState.m in Sources */,
+				9601A1EB14A81820003DE0B0 /* SBJsonStreamWriter.m in Sources */,
+				9601A1EC14A81820003DE0B0 /* SBJsonStreamWriterAccumulator.m in Sources */,
+				9601A1ED14A81820003DE0B0 /* SBJsonStreamWriterState.m in Sources */,
+				9601A1EE14A81820003DE0B0 /* SBJsonTokeniser.m in Sources */,
+				9601A1EF14A81820003DE0B0 /* SBJsonUTF8Stream.m in Sources */,
+				9601A1F014A81820003DE0B0 /* SBJsonWriter.m in Sources */,
+				96DA107014AEB3BB00E43576 /* AMDemoNotification.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		964BC19E14861E4100830181 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				964BC19F14861E4100830181 /* en */,
+				964BC1DD148621A100830181 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		96FA37BE148874D3001AE559 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96FA37BD148874D3001AE559 /* en */,
+				96FA37C1148874DE001AE559 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		96FA37D3148877A1001AE559 /* AMIPadMainController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				96FA37D2148877A1001AE559 /* en */,
+				961E6FFB148CAF3000902371 /* zh-Hans */,
+			);
+			name = AMIPadMainController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		964BC1B014861E4100830181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Wang (8PM299Q2W7)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "11A92E7F-092B-4FFA-8A6A-BEBCAE0A1D1C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		964BC1B114861E4100830181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Wang (8PM299Q2W7)";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "11A92E7F-092B-4FFA-8A6A-BEBCAE0A1D1C";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		964BC1B314861E4100830181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Wang (8PM299Q2W7)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppMocha/AppMocha-Prefix.pch";
+				INFOPLIST_FILE = "AppMocha/AppMocha-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../release/staging\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "19A75396-6685-4FBE-9A95-4A8F8E038668";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		964BC1B414861E4100830181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD_32_BIT)",
+					armv6,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Jason Wang (8PM299Q2W7)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AppMocha/AppMocha-Prefix.pch";
+				INFOPLIST_FILE = "AppMocha/AppMocha-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../../../release/staging\"",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "19A75396-6685-4FBE-9A95-4A8F8E038668";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		964BC18B14861E4100830181 /* Build configuration list for PBXProject "AppMocha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				964BC1B014861E4100830181 /* Debug */,
+				964BC1B114861E4100830181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		964BC1B214861E4100830181 /* Build configuration list for PBXNativeTarget "AppMocha" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				964BC1B314861E4100830181 /* Debug */,
+				964BC1B414861E4100830181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 964BC18814861E4100830181 /* Project object */;
+}

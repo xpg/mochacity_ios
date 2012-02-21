@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  AppMocha
+
+  Created by Jason Wang on 12/2/11.
+  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+*/
+
+// *************  Localizable  ***********
+
+"App_Receive_Push" = "收到通知";
+
+"AM_Demo_Logout" = "登出";
+
+"AM_Login_View_Email" = "邮箱:";
+"AM_Login_View_Password" = "密码:";
+
+"AM_Registration_View_Email" = "邮箱:";
+"AM_Registration_View_Password" = "密码:";
+"AM_Registration_View_Check" = "确认密码:";
+"AM_Registration_View_Code" = "邀请码:";
+
+"AM_Message_Login_Email_Null" = "邮件地址不能为空";
+"AM_Message_Login_Password_Null" = "输入的密码格式不对(>=6位)";
+"AM_Message_Login_Error" = "登录失败";
+
+"AM_Message_Registration_Email_Null" = "邮件地址不能为空";
+"AM_Message_Registration_Password_Null" = "输入的密码格式不对(>=6位)";
+"AM_Message_Registration_Not_Match" = "两次输入的密码不相同";
+"AM_Message_Registration_Code_Null" = "邀请码不能为空";
+"AM_Message_Registration_Error" = "注册失败";
+
+// *************  Image  ***********

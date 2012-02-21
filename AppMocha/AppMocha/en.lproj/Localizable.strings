@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  AppMocha
+
+  Created by Jason Wang on 12/2/11.
+  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
+*/
+
+// *************  Localizable  ***********
+
+"App_Receive_Push" = "Receive Notification";
+
+"AM_Demo_Logout" = "Logout";
+
+"AM_Login_View_Email" = "Email:";
+"AM_Login_View_Password" = "Password:";
+
+"AM_Registration_View_Email" = "Email:";
+"AM_Registration_View_Password" = "Password:";
+"AM_Registration_View_Check" = "Check Password:";
+"AM_Registration_View_Code" = "Code:";
+
+"AM_Message_Login_Email_Null" = "Email can not be empty";
+"AM_Message_Login_Password_Null" = "Password wrong format";
+"AM_Message_Login_Error" = "Login Failed";
+
+"AM_Message_Registration_Email_Null" = "Email can not be empty";
+"AM_Message_Registration_Password_Null" = "Password wrong format";
+"AM_Message_Registration_Not_Match" = "Password Not Match";
+"AM_Message_Registration_Code_Null" = "Invite Code can not be empty";
+"AM_Message_Registration_Error" = "Registration Failed";
+
+// *************  Image  ***********

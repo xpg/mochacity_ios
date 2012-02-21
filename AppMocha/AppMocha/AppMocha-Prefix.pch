@@ -1,0 +1,31 @@
+//
+// Prefix header for all source files of the 'AppMocha' target in the 'AppMocha' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #define AppBand_App_Key @"k"
+    #define AppBand_App_Secret @"s"
+    #define AppBand_App_BundleId @"bundleid"
+    #define AppBand_App_Email @"email"
+    #define AppBand_App_Password @"password"
+    #define AppBand_App_token @"token"
+    #define AppBand_App_Invite @"invite_code"
+    #define AppBand_App_UDID @"udid"
+
+    #define AppMocha_Demo_Notificaion_Receive_Key @"AppMocha_Demo_Notificaion_Receive_Key"
+
+    #define AppBand_App_Rich_Push_Read_Prefix @"AppBand_App_Rich_Push_Read_Prefix_"
+    #define AppBand_App_Product_Prefix @"AppBand_App_Product_Prefix"
+
+    #define AppBand_App_Push_State @"AppBand_App_Push_State"
+
+#endif
