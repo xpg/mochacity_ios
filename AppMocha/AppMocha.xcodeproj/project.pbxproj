@@ -45,7 +45,6 @@
 		965912E8148B108200B34187 /* AMIPhoneLoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965912E7148B108200B34187 /* AMIPhoneLoginView.m */; };
 		965912EB148B109D00B34187 /* AMIPhoneRegistrationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965912EA148B109D00B34187 /* AMIPhoneRegistrationView.m */; };
 		965912EE148B10AE00B34187 /* AMIPhoneRichView.m in Sources */ = {isa = PBXBuildFile; fileRef = 965912ED148B10AE00B34187 /* AMIPhoneRichView.m */; };
-		9663CD29149AFA5E00D3D94B /* AppBand.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9663CD26149AFA5E00D3D94B /* AppBand.bundle */; };
 		96B21EFB148B4D3400CC544A /* AMIPhonePushController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B21EF9148B4D3300CC544A /* AMIPhonePushController.m */; };
 		96B21EFC148B4D3400CC544A /* AMIPhonePushController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96B21EFA148B4D3300CC544A /* AMIPhonePushController.xib */; };
 		96B21F00148B4D5A00CC544A /* AMIPhonePurchaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96B21EFE148B4D5A00CC544A /* AMIPhonePurchaseController.m */; };
@@ -199,19 +198,6 @@
 		965912EA148B109D00B34187 /* AMIPhoneRegistrationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneRegistrationView.m; sourceTree = "<group>"; };
 		965912EC148B10AE00B34187 /* AMIPhoneRichView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhoneRichView.h; sourceTree = "<group>"; };
 		965912ED148B10AE00B34187 /* AMIPhoneRichView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhoneRichView.m; sourceTree = "<group>"; };
-		9663CD1A149AFA5E00D3D94B /* ABConstant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABConstant.h; sourceTree = "<group>"; };
-		9663CD1B149AFA5E00D3D94B /* ABNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABNotification.h; sourceTree = "<group>"; };
-		9663CD1C149AFA5E00D3D94B /* ABNotificationsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABNotificationsResponse.h; sourceTree = "<group>"; };
-		9663CD1D149AFA5E00D3D94B /* ABProduct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABProduct.h; sourceTree = "<group>"; };
-		9663CD1E149AFA5E00D3D94B /* ABProductsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABProductsResponse.h; sourceTree = "<group>"; };
-		9663CD1F149AFA5E00D3D94B /* ABPurchase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPurchase.h; sourceTree = "<group>"; };
-		9663CD20149AFA5E00D3D94B /* ABPurchaseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPurchaseResponse.h; sourceTree = "<group>"; };
-		9663CD21149AFA5E00D3D94B /* ABPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABPush.h; sourceTree = "<group>"; };
-		9663CD24149AFA5E00D3D94B /* ABResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABResponse.h; sourceTree = "<group>"; };
-		9663CD25149AFA5E00D3D94B /* ABRichResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABRichResponse.h; sourceTree = "<group>"; };
-		9663CD26149AFA5E00D3D94B /* AppBand.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = AppBand.bundle; sourceTree = "<group>"; };
-		9663CD27149AFA5E00D3D94B /* AppBand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppBand.h; sourceTree = "<group>"; };
-		9663CD28149AFA5E00D3D94B /* AppBandKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppBandKit.h; sourceTree = "<group>"; };
 		96B21EF8148B4D3300CC544A /* AMIPhonePushController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AMIPhonePushController.h; sourceTree = "<group>"; };
 		96B21EF9148B4D3300CC544A /* AMIPhonePushController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AMIPhonePushController.m; sourceTree = "<group>"; };
 		96B21EFA148B4D3300CC544A /* AMIPhonePushController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AMIPhonePushController.xib; sourceTree = "<group>"; };
@@ -435,7 +421,6 @@
 		964BC18614861E4100830181 = {
 			isa = PBXGroup;
 			children = (
-				9663CD19149AFA5E00D3D94B /* AppBand */,
 				964BC19B14861E4100830181 /* AppMocha */,
 				964BC19414861E4100830181 /* Frameworks */,
 				964BC19214861E4100830181 /* Products */,
@@ -567,27 +552,6 @@
 				965912ED148B10AE00B34187 /* AMIPhoneRichView.m */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		9663CD19149AFA5E00D3D94B /* AppBand */ = {
-			isa = PBXGroup;
-			children = (
-				9663CD1A149AFA5E00D3D94B /* ABConstant.h */,
-				9663CD1B149AFA5E00D3D94B /* ABNotification.h */,
-				9663CD1C149AFA5E00D3D94B /* ABNotificationsResponse.h */,
-				9663CD1D149AFA5E00D3D94B /* ABProduct.h */,
-				9663CD1E149AFA5E00D3D94B /* ABProductsResponse.h */,
-				9663CD1F149AFA5E00D3D94B /* ABPurchase.h */,
-				9663CD20149AFA5E00D3D94B /* ABPurchaseResponse.h */,
-				9663CD21149AFA5E00D3D94B /* ABPush.h */,
-				9663CD24149AFA5E00D3D94B /* ABResponse.h */,
-				9663CD25149AFA5E00D3D94B /* ABRichResponse.h */,
-				9663CD26149AFA5E00D3D94B /* AppBand.bundle */,
-				9663CD27149AFA5E00D3D94B /* AppBand.h */,
-				9663CD28149AFA5E00D3D94B /* AppBandKit.h */,
-			);
-			name = AppBand;
-			path = ../../../../../release/AppBand;
 			sourceTree = "<group>";
 		};
 		96E96DC51489D1CF0044E1A4 /* Cells */ = {
@@ -814,7 +778,6 @@
 				96B21F09148B4DC200CC544A /* AMIPhonePushCell.xib in Resources */,
 				96B21F0B148B4DD500CC544A /* AMIPhoneProductCell.xib in Resources */,
 				96B21F10148B573200CC544A /* AMIPhoneProductShowController.xib in Resources */,
-				9663CD29149AFA5E00D3D94B /* AppBand.bundle in Resources */,
 				96DAE27714A1D6810022203F /* AMIPhoneSettingController.xib in Resources */,
 				96DAE27D14A1D69F0022203F /* AMIPadSettingController.xib in Resources */,
 				96DB7C4914A2CC99006DBDD6 /* AMIPhoneSettingAliasCell.xib in Resources */,
