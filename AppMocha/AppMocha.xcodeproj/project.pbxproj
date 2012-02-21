@@ -28,6 +28,10 @@
 		9601A1EE14A81820003DE0B0 /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1E014A81820003DE0B0 /* SBJsonTokeniser.m */; };
 		9601A1EF14A81820003DE0B0 /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1E214A81820003DE0B0 /* SBJsonUTF8Stream.m */; };
 		9601A1F014A81820003DE0B0 /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9601A1E414A81820003DE0B0 /* SBJsonWriter.m */; };
+		9624992114F378E60025D775 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624991714F378E60025D775 /* Reachability.m */; };
+		9624992214F378E60025D775 /* xRestDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624991A14F378E60025D775 /* xRestDownloadOperation.m */; };
+		9624992314F378E60025D775 /* xRestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624991D14F378E60025D775 /* xRestManager.m */; };
+		9624992414F378E60025D775 /* xRestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9624991F14F378E60025D775 /* xRestOperation.m */; };
 		9635E41D14876245006CF9DD /* CoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9635E41914876245006CF9DD /* CoreDataController.m */; };
 		9635E41E14876245006CF9DD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9635E41B14876245006CF9DD /* CoreDataManager.m */; };
 		964BC19614861E4100830181 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 964BC19514861E4100830181 /* UIKit.framework */; };
@@ -99,10 +103,6 @@
 		96E96DFE148A27670044E1A4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96E96DFD148A27660044E1A4 /* QuartzCore.framework */; };
 		96E96E00148A29BD0044E1A4 /* Icon_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96DFF148A29BC0044E1A4 /* Icon_72x72.png */; };
 		96E96E02148A2A1C0044E1A4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 96E96E01148A2A1B0044E1A4 /* Default.png */; };
-		96F46E74149AF6C70006C09E /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E6A149AF6C70006C09E /* Reachability.m */; };
-		96F46E75149AF6C70006C09E /* xRestDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E6D149AF6C70006C09E /* xRestDownloadOperation.m */; };
-		96F46E76149AF6C70006C09E /* xRestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E70149AF6C70006C09E /* xRestManager.m */; };
-		96F46E77149AF6C70006C09E /* xRestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 96F46E72149AF6C70006C09E /* xRestOperation.m */; };
 		96FA37BC148874D3001AE559 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37BE148874D3001AE559 /* Localizable.strings */; };
 		96FA37C414887501001AE559 /* I18NController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96FA37C314887501001AE559 /* I18NController.m */; };
 		96FA37D1148877A1001AE559 /* AMIPadMainController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 96FA37D3148877A1001AE559 /* AMIPadMainController.xib */; };
@@ -170,6 +170,17 @@
 		9601A1E314A81820003DE0B0 /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		9601A1E414A81820003DE0B0 /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		961E6FFB148CAF3000902371 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/AMIPadMainController.xib"; sourceTree = "<group>"; };
+		9624991614F378E60025D775 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		9624991714F378E60025D775 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		9624991814F378E60025D775 /* xRestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestConstants.h; sourceTree = "<group>"; };
+		9624991914F378E60025D775 /* xRestDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestDownloadOperation.h; sourceTree = "<group>"; };
+		9624991A14F378E60025D775 /* xRestDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestDownloadOperation.m; sourceTree = "<group>"; };
+		9624991B14F378E60025D775 /* xRestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestKit.h; sourceTree = "<group>"; };
+		9624991C14F378E60025D775 /* xRestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestManager.h; sourceTree = "<group>"; };
+		9624991D14F378E60025D775 /* xRestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestManager.m; sourceTree = "<group>"; };
+		9624991E14F378E60025D775 /* xRestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestOperation.h; sourceTree = "<group>"; };
+		9624991F14F378E60025D775 /* xRestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestOperation.m; sourceTree = "<group>"; };
+		9624992014F378E60025D775 /* xRestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestProtocol.h; sourceTree = "<group>"; };
 		9635E41814876245006CF9DD /* CoreDataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataController.h; sourceTree = "<group>"; };
 		9635E41914876245006CF9DD /* CoreDataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataController.m; sourceTree = "<group>"; };
 		9635E41A14876245006CF9DD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
@@ -274,17 +285,6 @@
 		96E96DFD148A27660044E1A4 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		96E96DFF148A29BC0044E1A4 /* Icon_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_72x72.png; sourceTree = "<group>"; };
 		96E96E01148A2A1B0044E1A4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		96F46E69149AF6C70006C09E /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		96F46E6A149AF6C70006C09E /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		96F46E6B149AF6C70006C09E /* xRestConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestConstants.h; sourceTree = "<group>"; };
-		96F46E6C149AF6C70006C09E /* xRestDownloadOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestDownloadOperation.h; sourceTree = "<group>"; };
-		96F46E6D149AF6C70006C09E /* xRestDownloadOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestDownloadOperation.m; sourceTree = "<group>"; };
-		96F46E6E149AF6C70006C09E /* xRestKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestKit.h; sourceTree = "<group>"; };
-		96F46E6F149AF6C70006C09E /* xRestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestManager.h; sourceTree = "<group>"; };
-		96F46E70149AF6C70006C09E /* xRestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestManager.m; sourceTree = "<group>"; };
-		96F46E71149AF6C70006C09E /* xRestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestOperation.h; sourceTree = "<group>"; };
-		96F46E72149AF6C70006C09E /* xRestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = xRestOperation.m; sourceTree = "<group>"; };
-		96F46E73149AF6C70006C09E /* xRestProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xRestProtocol.h; sourceTree = "<group>"; };
 		96FA37BD148874D3001AE559 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		96FA37C1148874DE001AE559 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		96FA37C214887501001AE559 /* I18NController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = I18NController.h; sourceTree = "<group>"; };
@@ -418,6 +418,24 @@
 			path = Json;
 			sourceTree = "<group>";
 		};
+		9624991514F378E60025D775 /* xRestKit */ = {
+			isa = PBXGroup;
+			children = (
+				9624991614F378E60025D775 /* Reachability.h */,
+				9624991714F378E60025D775 /* Reachability.m */,
+				9624991814F378E60025D775 /* xRestConstants.h */,
+				9624991914F378E60025D775 /* xRestDownloadOperation.h */,
+				9624991A14F378E60025D775 /* xRestDownloadOperation.m */,
+				9624991B14F378E60025D775 /* xRestKit.h */,
+				9624991C14F378E60025D775 /* xRestManager.h */,
+				9624991D14F378E60025D775 /* xRestManager.m */,
+				9624991E14F378E60025D775 /* xRestOperation.h */,
+				9624991F14F378E60025D775 /* xRestOperation.m */,
+				9624992014F378E60025D775 /* xRestProtocol.h */,
+			);
+			path = xRestKit;
+			sourceTree = "<group>";
+		};
 		964BC18614861E4100830181 = {
 			isa = PBXGroup;
 			children = (
@@ -453,7 +471,7 @@
 		964BC19B14861E4100830181 /* AppMocha */ = {
 			isa = PBXGroup;
 			children = (
-				96F46E68149AF6C70006C09E /* xRestKit */,
+				9624991514F378E60025D775 /* xRestKit */,
 				96FA37A7148872F9001AE559 /* Resources */,
 				9600E71D14872F83006A04D1 /* Utility */,
 				9600E6C214871B3D006A04D1 /* iPhone */,
@@ -574,25 +592,6 @@
 				96DB7C5E14A31392006DBDD6 /* AMIPadSettingPushIntervalCell.xib */,
 			);
 			path = Cells;
-			sourceTree = "<group>";
-		};
-		96F46E68149AF6C70006C09E /* xRestKit */ = {
-			isa = PBXGroup;
-			children = (
-				96F46E69149AF6C70006C09E /* Reachability.h */,
-				96F46E6A149AF6C70006C09E /* Reachability.m */,
-				96F46E6B149AF6C70006C09E /* xRestConstants.h */,
-				96F46E6C149AF6C70006C09E /* xRestDownloadOperation.h */,
-				96F46E6D149AF6C70006C09E /* xRestDownloadOperation.m */,
-				96F46E6E149AF6C70006C09E /* xRestKit.h */,
-				96F46E6F149AF6C70006C09E /* xRestManager.h */,
-				96F46E70149AF6C70006C09E /* xRestManager.m */,
-				96F46E71149AF6C70006C09E /* xRestOperation.h */,
-				96F46E72149AF6C70006C09E /* xRestOperation.m */,
-				96F46E73149AF6C70006C09E /* xRestProtocol.h */,
-			);
-			name = xRestKit;
-			path = ../../../../../../../IoT/Labs/OpenSource/xRestKit/xRestKit;
 			sourceTree = "<group>";
 		};
 		96FA37A7148872F9001AE559 /* Resources */ = {
@@ -825,10 +824,6 @@
 				96B21F04148B4D8900CC544A /* AMIPhonePushCell.m in Sources */,
 				96B21F07148B4DA700CC544A /* AMIPhoneProductCell.m in Sources */,
 				96B21F0F148B573200CC544A /* AMIPhoneProductShowController.m in Sources */,
-				96F46E74149AF6C70006C09E /* Reachability.m in Sources */,
-				96F46E75149AF6C70006C09E /* xRestDownloadOperation.m in Sources */,
-				96F46E76149AF6C70006C09E /* xRestManager.m in Sources */,
-				96F46E77149AF6C70006C09E /* xRestOperation.m in Sources */,
 				96DAE27614A1D6810022203F /* AMIPhoneSettingController.m in Sources */,
 				96DAE27C14A1D69F0022203F /* AMIPadSettingController.m in Sources */,
 				96DB7C4314A2CC54006DBDD6 /* AMIPhoneSettingAliasCell.m in Sources */,
@@ -852,6 +847,10 @@
 				9601A1EF14A81820003DE0B0 /* SBJsonUTF8Stream.m in Sources */,
 				9601A1F014A81820003DE0B0 /* SBJsonWriter.m in Sources */,
 				96DA107014AEB3BB00E43576 /* AMDemoNotification.m in Sources */,
+				9624992114F378E60025D775 /* Reachability.m in Sources */,
+				9624992214F378E60025D775 /* xRestDownloadOperation.m in Sources */,
+				9624992314F378E60025D775 /* xRestManager.m in Sources */,
+				9624992414F378E60025D775 /* xRestOperation.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
