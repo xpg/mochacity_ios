@@ -15,8 +15,10 @@
 #import "I18NController.h"
 
 #import "AMPushCell.h"
-#import "AppBandKit.h"
 #import "AMDemoNotification.h"
+
+#import "ABPush+Private.h"
+#import "ABInboxResponse.h"
 
 @interface AMIPadPushController()
 
@@ -34,7 +36,7 @@
 
 - (void)stopReloading;
 
-- (void)getNotificationsEnd:(ABNotificationsResponse *)response;
+- (void)getNotificationsEnd:(ABInboxResponse *)response;
 
 - (void)reloadPushTable;
 
@@ -159,6 +161,8 @@
     if (notification) {
         abni = notification.notification.notificationId;
     }
+//    [[ABPush shared] getNotificationsByType:ABNotificationTypeAll startAt:abni status:ABNotificationStatusAll pageCapacity:[NSNumber numberWithInt:number] target:self finishSelector:@selector(getNotificationsEnd:)];
+    
     [[ABPush shared] getNotificationsByType:ABNotificationTypeAll startAt:abni status:ABNotificationStatusAll pageCapacity:[NSNumber numberWithInt:number] target:self finishSelector:@selector(getNotificationsEnd:)];
 }
 
@@ -187,10 +191,10 @@
     }];
 }
 
-- (void)getNotificationsEnd:(ABNotificationsResponse *)response {
+- (void)getNotificationsEnd:(ABInboxResponse *)response {
     NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.pushArray];
-    if (response && [response.notificationArray count] > 0) {
-        for (ABNotification *noti in response.notificationArray) {
+    if (response && [response.notificationsArray count] > 0) {
+        for (ABNotification *noti in response.notificationsArray) {
             AMDemoNotification *amNoti = [[[AMDemoNotification alloc] init] autorelease];
             [amNoti setNotification:noti];
             [tmp addObject:amNoti];
@@ -199,7 +203,7 @@
     
     self.pushArray = tmp;
     isLoading = NO;
-    hasNextPage = ([response.notificationArray count] >= 40);
+    hasNextPage = ([response.notificationsArray count] >= 40);
     [self performSelectorOnMainThread:@selector(reloadPushTable) withObject:nil waitUntilDone:NO];
 }
 

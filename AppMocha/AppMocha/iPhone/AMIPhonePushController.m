@@ -18,7 +18,8 @@
 
 #import "AMDemoNotification.h"
 
-#import "AppBandKit.h"
+#import "ABInboxResponse.h"
+#import "ABPush+Private.h"
 
 @interface AMIPhonePushController()
 
@@ -36,7 +37,7 @@
 
 - (void)stopReloading;
 
-- (void)getNotificationsEnd:(ABNotificationsResponse *)response;
+- (void)getNotificationsEnd:(ABInboxResponse *)response;
 
 - (void)reloadPushTable;
 
@@ -191,10 +192,10 @@
     }];
 }
 
-- (void)getNotificationsEnd:(ABNotificationsResponse *)response {
+- (void)getNotificationsEnd:(ABInboxResponse *)response {
     NSMutableArray *tmp = [NSMutableArray arrayWithArray:self.pushArray];
-    if (response && [response.notificationArray count] > 0) {
-        for (ABNotification *noti in response.notificationArray) {
+    if (response && [response.notificationsArray count] > 0) {
+        for (ABNotification *noti in response.notificationsArray) {
             AMDemoNotification *amNoti = [[[AMDemoNotification alloc] init] autorelease];
             [amNoti setNotification:noti];
             [tmp addObject:amNoti];
@@ -203,7 +204,7 @@
     
     self.pushArray = tmp;
     isLoading = NO;
-    hasNextPage = ([response.notificationArray count] >= 20);
+    hasNextPage = ([response.notificationsArray count] >= 20);
     [self performSelectorOnMainThread:@selector(reloadPushTable) withObject:nil waitUntilDone:NO];
 }
 

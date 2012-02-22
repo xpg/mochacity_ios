@@ -8,22 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-#import "ABProduct.h"
+//#import "ABProduct.h"
 
 @interface AMDemoProduct : NSObject {
-    ABProduct *product;
-    NSString *filePath;
-    BOOL isDownload;
-    UIImage *icon;
-    BOOL isDownloading;
+//    ABProduct *product;
+//    NSString *filePath;
+//    BOOL isDownload;
+//    UIImage *icon;
+//    BOOL isDownloading;
 }
 
-@property(nonatomic,retain) ABProduct *product;
-@property(nonatomic,copy) NSString *filePath;
-@property(nonatomic,retain) UIImage *icon;
-@property(assign) BOOL isDownload;
-@property(assign) BOOL isDownloading;
-
-+ (AMDemoProduct *)productWithABProduct:(ABProduct *)pro;
+//@property(nonatomic,retain) ABProduct *product;
+//@property(nonatomic,copy) NSString *filePath;
+//@property(nonatomic,retain) UIImage *icon;
+//@property(assign) BOOL isDownload;
+//@property(assign) BOOL isDownloading;
+//
+//+ (AMDemoProduct *)productWithABProduct:(ABProduct *)pro;
 
 @end

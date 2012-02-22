@@ -21,17 +21,20 @@
 #import "AMIPadMainController.h"
 #import "AMIPhoneMainController.h"
 #import "AMIPadPushController.h"
-#import "AMIPadPurchaseController.h"
+//#import "AMIPadPurchaseController.h"
 #import "AMIPadIntroController.h"
 #import "AMIPadSettingController.h"
 
 #import "AMIPhonePushController.h"
-#import "AMIPhonePurchaseController.h"
+//#import "AMIPhonePurchaseController.h"
 #import "AMIPhoneIntroController.h"
 #import "AMIPhoneSettingController.h"
 
-#import "AppBandKit.h"
+//#import "AppBandKit.h"
 #import "xRestKit.h"
+
+#import "AppBand+Private.h"
+#import "ABPush+Private.h"
 
 #import "SFHFKeychainUtils.h"
 
@@ -39,7 +42,7 @@
 
 #import "I18NController.h"
 
-@interface AMAppDelegate()
+@interface AMAppDelegate() <ABPushDelegate>
 
 @property(nonatomic,copy) NSString *userEmail;
 @property(nonatomic,copy) NSString *userPassword;
@@ -48,8 +51,6 @@
 - (void)setDeviceToken:(NSData *)tokenData;
 
 - (NSString *)urlScheme;
-
-- (void)didReceiveNotification:(ABNotification *)notification;
 
 - (void)autoLogin;
 
@@ -134,16 +135,10 @@
     return [NSString stringWithFormat:@"%@%@",AppMocha_Demo_App,[[AppBand shared] appKey]];
 }
 
-- (void)didReceiveNotification:(ABNotification *)notification {
-    if ([self availableString:notification.notificationId]) {
-        [[NSNotificationCenter defaultCenter] postNotificationName:AppMocha_Demo_Notificaion_Receive_Key object:notification userInfo:nil];
-    }
-}
-
 - (void)autoLogin {
     NSString *appKey = [[AppBand shared] appKey];
     NSString *appSecret = [[AppBand shared] appSecret];
-    NSString *udid = [[AppBand shared] udid];
+    NSString *udid = [[[AppBand shared] appUser] udid];
     NSString *token = [(AMAppDelegate *)[UIApplication sharedApplication].delegate deviceToken];
     NSString *bundleId = [[NSBundle bundleForClass:[self class]] bundleIdentifier];
     
@@ -155,7 +150,7 @@
         parameters = [NSDictionary dictionaryWithObjectsAndKeys:udid, AppBand_App_UDID, appKey, AppBand_App_Key, appSecret, AppBand_App_Secret, bundleId, AppBand_App_BundleId, self.token, AppBand_App_token, self.userEmail, AppBand_App_Email, self.userPassword, AppBand_App_Password, nil];
     }
     
-    NSString *url = [NSString stringWithFormat:@"%@/%@",[[AppBand shared] server] ,@"users/sign_in"];
+    NSString *url = [NSString stringWithFormat:@"%@/%@",[[[AppBand shared] configuration] server] ,@"users/sign_in"];
     [[xRestManager defaultManager] sendRequestTo:url parameter:parameters timeout:30. completion:^(xRestCompletionType type, NSString *response) {
         
     }];
@@ -163,7 +158,7 @@
 
 - (UIViewController *)getFunctionController {
     UIViewController *pushController = nil;
-    UIViewController *purchaseController = nil;
+//    UIViewController *purchaseController = nil;
     UIViewController *introController = nil;
     UIViewController *settingController = nil;
     UIImage *logon = nil;
@@ -177,13 +172,13 @@
         [pushController setTabBarItem:pushBarItem];
         [pushBarItem release];
         
-        purchaseController = [[AMIPhonePurchaseController alloc] initWithNibName:@"AMIPhonePurchaseController" bundle:nil];
-        purchaseController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:[[I18NController shareController] getLocalizedString:AM_Demo_Logout comment:@"" locale:nil] style:UIBarButtonItemStylePlain target:self action:@selector(switchToUnLoginController)] autorelease];
-        
-        //        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
-        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTitle:@"应用内购买" image:[UIImage imageNamed:@"iPad_AM_Tab_Purchase"] tag:1];
-        [purchaseController setTabBarItem:purchaseBarItem];
-        [purchaseBarItem release];
+//        purchaseController = [[AMIPhonePurchaseController alloc] initWithNibName:@"AMIPhonePurchaseController" bundle:nil];
+//        purchaseController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:[[I18NController shareController] getLocalizedString:AM_Demo_Logout comment:@"" locale:nil] style:UIBarButtonItemStylePlain target:self action:@selector(switchToUnLoginController)] autorelease];
+//        
+//        //        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
+//        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTitle:@"应用内购买" image:[UIImage imageNamed:@"iPad_AM_Tab_Purchase"] tag:1];
+//        [purchaseController setTabBarItem:purchaseBarItem];
+//        [purchaseBarItem release];
         
         introController = [[AMIPhoneIntroController alloc] initWithNibName:@"AMIPhoneIntroController" bundle:nil];
         introController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:[[I18NController shareController] getLocalizedString:AM_Demo_Logout comment:@"" locale:nil] style:UIBarButtonItemStylePlain target:self action:@selector(switchToUnLoginController)] autorelease];
@@ -209,13 +204,13 @@
         [pushController setTabBarItem:pushBarItem];
         [pushBarItem release];
         
-        purchaseController = [[AMIPadPurchaseController alloc] initWithNibName:@"AMIPadPurchaseController" bundle:nil];
-        purchaseController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:[[I18NController shareController] getLocalizedString:AM_Demo_Logout comment:@"" locale:nil] style:UIBarButtonItemStylePlain target:self action:@selector(switchToUnLoginController)] autorelease];
-        
-//        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
-        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTitle:@"应用内购买" image:[UIImage imageNamed:@"iPad_AM_Tab_Purchase"] tag:1];
-        [purchaseController setTabBarItem:purchaseBarItem];
-        [purchaseBarItem release];
+//        purchaseController = [[AMIPadPurchaseController alloc] initWithNibName:@"AMIPadPurchaseController" bundle:nil];
+//        purchaseController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:[[I18NController shareController] getLocalizedString:AM_Demo_Logout comment:@"" locale:nil] style:UIBarButtonItemStylePlain target:self action:@selector(switchToUnLoginController)] autorelease];
+//        
+////        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTabBarSystemItem:UITabBarSystemItemFeatured tag:1];
+//        UITabBarItem *purchaseBarItem = [[UITabBarItem alloc] initWithTitle:@"应用内购买" image:[UIImage imageNamed:@"iPad_AM_Tab_Purchase"] tag:1];
+//        [purchaseController setTabBarItem:purchaseBarItem];
+//        [purchaseBarItem release];
         
         introController = [[AMIPadIntroController alloc] initWithNibName:@"AMIPadIntroController" bundle:nil];
         introController.navigationItem.rightBarButtonItem = [[[UIBarButtonItem alloc] initWithTitle:[[I18NController shareController] getLocalizedString:AM_Demo_Logout comment:@"" locale:nil] style:UIBarButtonItemStylePlain target:self action:@selector(switchToUnLoginController)] autorelease];
@@ -237,9 +232,9 @@
     [pushController release];
     [naviPushController.navigationBar.topItem setTitleView:[[UIImageView alloc] initWithImage:logon]];
     
-    UINavigationController *naviPurchaseController = [[UINavigationController alloc] initWithRootViewController:purchaseController];
-    [purchaseController release];
-    [naviPurchaseController.navigationBar.topItem setTitleView:[[UIImageView alloc] initWithImage:logon]];
+//    UINavigationController *naviPurchaseController = [[UINavigationController alloc] initWithRootViewController:purchaseController];
+//    [purchaseController release];
+//    [naviPurchaseController.navigationBar.topItem setTitleView:[[UIImageView alloc] initWithImage:logon]];
     
     UINavigationController *naviIntroController = [[UINavigationController alloc] initWithRootViewController:introController];
     [introController release];
@@ -250,10 +245,11 @@
     [naviSettingController.navigationBar.topItem setTitleView:[[UIImageView alloc] initWithImage:logon]];
     
     UITabBarController *barController = [[[UITabBarController alloc] init] autorelease];
-    [barController setViewControllers:[NSArray arrayWithObjects:naviPushController, naviPurchaseController, naviIntroController, naviSettingController, nil]];
+//    [barController setViewControllers:[NSArray arrayWithObjects:naviPushController, naviPurchaseController, naviIntroController, naviSettingController, nil]];
+    [barController setViewControllers:[NSArray arrayWithObjects:naviPushController, naviIntroController, naviSettingController, nil]];
     
     [naviPushController release];
-    [naviPurchaseController release];
+//    [naviPurchaseController release];
     [naviIntroController release];
     
     return barController;
@@ -284,7 +280,17 @@
 }
 
 - (void)handlePushWhenLauching:(NSDictionary *)launchOptions {
-    [[ABPush shared] handleNotification:[launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey] applicationState:UIApplicationStateInactive target:self pushSelector:@selector(didReceiveNotification:) richSelector:@selector(didReceiveNotification:)];
+//    [[ABPush shared] handleNotification:[launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey] applicationState:UIApplicationStateInactive target:self pushSelector:@selector(didReceiveNotification:) richSelector:@selector(didReceiveNotification:)];
+    
+    [[ABPush shared] handleNotification:[launchOptions objectForKey:UIApplicationLaunchOptionsRemoteNotificationKey] applicationState:UIApplicationStateInactive];
+}
+
+#pragma mark - ABPushDelegate
+
+- (void)didRecieveNotification:(ABNotification *)notification {
+    if ([self availableString:notification.notificationId]) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:AppMocha_Demo_Notificaion_Receive_Key object:notification userInfo:nil];
+    }
 }
 
 #pragma mark - Register For Remote Notification
@@ -294,14 +300,21 @@
     if ([application respondsToSelector:@selector(applicationState)]) {
         appState = application.applicationState;
     }
-    [[ABPush shared] handleNotification:userInfo applicationState:appState target:self pushSelector:@selector(didReceiveNotification:) richSelector:@selector(didReceiveNotification:)];
+//    [[ABPush shared] handleNotification:userInfo applicationState:appState target:self pushSelector:@selector(didReceiveNotification:) richSelector:@selector(didReceiveNotification:)];
+    
+    [[ABPush shared] handleNotification:userInfo applicationState:appState];
 }
 
 // one of these will be called after calling -registerForRemoteNotifications
 - (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [self setDeviceToken:deviceToken];
     [[AppBand shared] setPushToken:deviceToken];
-    [[AppBand shared] updateSettingsWithTarget:nil finishSelector:nil];
+//    [[AppBand shared] updateSettingsWithTarget:nil finishSelector:nil];
+    [[AppBand shared] updateSettingsWithTarget:nil];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+
 }
 
 #pragma mark - UIApplication lifecycle
@@ -334,12 +347,11 @@
     [kickOffOptions setValue:launchOptions forKey:AppBandKickOfOptionsLaunchOptionsKey];
     [kickOffOptions setValue:configOptions forKey:AppBandKickOfOptionsAppBandConfigKey];
     
-    [AppBand kickoff:kickOffOptions];
-    
-    if (![[AppBand shared] getTags]) 
-        [[AppBand shared] setTags:[NSDictionary dictionaryWithObjectsAndKeys:@"zh", AppBandTagPreferKeyCountry, nil]];
+    [AppBand kickoff:[NSDictionary dictionaryWithObjectsAndKeys:configOptions, AppBandKickOfOptionsAppBandConfigKey, nil]];
+    [[AppBand shared] setTagsWithK1:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Gender"] k2:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Age"] k3:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Salary"] k4:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Job"] k5:nil];
     
     [[ABPush shared] registerRemoteNotificationWithTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeBadge];
+    [[ABPush shared] setPushDelegate:self];
     
     if ([self availableString:self.userEmail] && [self availableString:self.userPassword]) {
          self.rootController = [self getFunctionController];

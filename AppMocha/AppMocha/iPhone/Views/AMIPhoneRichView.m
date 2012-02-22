@@ -10,11 +10,11 @@
 
 #import "AMAppDelegate.h"
 #import "CoreDataManager.h"
-#import "AppBandKit.h"
 
-@interface AMIPhoneRichView()
+#import "ABRichResponse.h"
+#import "ABPush+Private.h"
 
-- (void)finishGetRich:(ABRichResponse *)response;
+@interface AMIPhoneRichView() <ABRichDelegate>
 
 - (void)showRich:(ABRichResponse *)response;
 
@@ -25,16 +25,12 @@
 @synthesize delegate;
 @synthesize notification = _notification;
 
-- (void)finishGetRich:(ABRichResponse *)response {
-    [self performSelectorOnMainThread:@selector(showRich:) withObject:response waitUntilDone:YES];
-}
-
 - (void)showRich:(ABRichResponse *)response {
     [indicatorView stopAnimating];
     [indicatorView setHidden:YES];
     [webView setHidden:NO];
     
-    if (response.code == ABResponseCodeHTTPSuccess && response.richContent) {
+    if (response.code == ABResponseCodeSuccess && response.richContent) {
         
         [titleLabel setText:response.richTitle];
         [webView loadHTMLString:response.richContent baseURL:nil];
@@ -44,6 +40,12 @@
         
         [[NSNotificationCenter defaultCenter] postNotificationName:[NSString stringWithFormat:@"%@%@",AppBand_App_Rich_Push_Read_Prefix,self.notification.notification.notificationId] object:nil];
     }
+}
+
+#pragma mark - ABRichDelegate
+
+- (void)didRecieveRichContent:(ABRichResponse *)response {
+    [self performSelectorOnMainThread:@selector(showRich:) withObject:response waitUntilDone:YES];
 }
 
 #pragma mark - Public
@@ -66,7 +68,8 @@
         [webView setHidden:NO]; 
         [indicatorView startAnimating];
         [indicatorView setHidden:NO];
-        [[ABPush shared] getRichContent:self.notification.notification target:self finishSelector:@selector(finishGetRich:)];
+//        [[ABPush shared] getRichContent:self.notification.notification target:self finishSelector:@selector(finishGetRich:)];
+        [[ABPush shared] getRichContent:self.notification.notification delegate:self];
     }
 }
 

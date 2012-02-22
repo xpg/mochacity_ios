@@ -15,8 +15,10 @@
 
 #import "AMIPadLoginView.h"
 
-#import "AppBandKit.h"
+//#import "AppBandKit.h"
 #import "xRestKit.h"
+
+#import "AppBand+Private.h"
 
 #import "AMAppDelegate.h"
 #import "I18NController.h"
@@ -156,7 +158,7 @@
     
     NSString *appKey = [[AppBand shared] appKey];
     NSString *appSecret = [[AppBand shared] appSecret];
-    NSString *udid = [[AppBand shared] udid];
+    NSString *udid = [[[AppBand shared] appUser] udid];
     NSString *token = [(AMAppDelegate *)[UIApplication sharedApplication].delegate deviceToken];
     NSString *bundleId = [[NSBundle bundleForClass:[self class]] bundleIdentifier];
     
@@ -167,7 +169,7 @@
         parameters = [NSDictionary dictionaryWithObjectsAndKeys:udid, AppBand_App_UDID, appKey, AppBand_App_Key, appSecret, AppBand_App_Secret, bundleId, AppBand_App_BundleId, token, AppBand_App_token, self.email, AppBand_App_Email, self.password, AppBand_App_Password, nil];
     }
     
-    NSString *url = [NSString stringWithFormat:@"%@/%@", [[AppBand shared] server] ,@"users/sign_in"];
+    NSString *url = [NSString stringWithFormat:@"%@/%@", [[[AppBand shared] configuration] server] ,@"users/sign_in"];
     
     [[xRestManager defaultManager] sendRequestTo:url parameter:parameters timeout:30. completion:^(xRestCompletionType type, NSString *response) {
         [self performSelectorOnMainThread:@selector(hiddenIndicatorAndShowMessage:) withObject:[NSNumber numberWithInt:type] waitUntilDone:YES];

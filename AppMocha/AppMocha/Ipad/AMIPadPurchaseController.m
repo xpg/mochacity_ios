@@ -15,8 +15,6 @@
 
 #import "AMAppDelegate.h"
 
-#import "AppBandKit.h"
-
 @interface AMIPadPurchaseController()
 
 @property(nonatomic,copy) NSArray *productArray;

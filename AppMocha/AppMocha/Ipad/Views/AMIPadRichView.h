@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-#import "AppBandKit.h"
+//#import "AppBandKit.h"
 #import "AMDemoNotification.h"
 
 @protocol AMIPadRichViewDelegate;
