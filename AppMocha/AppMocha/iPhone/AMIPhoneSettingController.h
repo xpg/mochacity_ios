@@ -11,6 +11,7 @@
 #import "AMIPhoneSettingAliasCell.h"
 #import "AMIPhoneSettingPushEnableCell.h"
 #import "AMIPhoneSettingPushIntervalCell.h"
+#import "AMIPhoneSystemSettingController.h"
 
 @interface AMIPhoneSettingController : UIViewController <UITableViewDelegate,UITableViewDataSource,AMIPhoneSettingAliasCellDelegate,AMIPhoneSettingPushEnableCellDelegate> {
     IBOutlet AMIPhoneSettingAliasCell *aliasCell;
@@ -20,6 +21,8 @@
     IBOutlet UITableView *settingView;
     
     UIBarButtonItem *leftBarButton;
+    UISwitch *_pushSwitch;
+    AMIPhoneSystemSettingController *_systemSettingVC;
     
     @private
         BOOL _pushEnable;

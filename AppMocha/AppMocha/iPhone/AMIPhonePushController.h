@@ -32,6 +32,9 @@
     UIView *refreshHeaderView;
     UILabel *refreshLabel;
     UIActivityIndicatorView *refreshSpinner;
+    
+    UIImageView *_connectMochaImageView;
+    
 }
 
 @property(nonatomic,retain) IBOutlet UITableView *pushTableView;

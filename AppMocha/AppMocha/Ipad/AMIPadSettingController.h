@@ -11,6 +11,7 @@
 #import "AMIPadSettingAliasCell.h"
 #import "AMIPadSettingPushEnableCell.h"
 #import "AMIPadSettingPushIntervalCell.h"
+#import "AMIPadSettingSystemSetting.h"
 
 @interface AMIPadSettingController : UIViewController <UITableViewDelegate,UITableViewDataSource,AMIPadSettingAliasCellDelegate,AMIPadSettingPushEnableCellDelegate> {
     IBOutlet AMIPadSettingAliasCell *aliasCell;
@@ -20,6 +21,8 @@
     IBOutlet UITableView *settingView;
     
     UIBarButtonItem *leftBarButton;
+    UISwitch *_pushSwitch;
+    AMIPadSettingSystemSetting *_systemSettingVC;
     
     @private
         BOOL _pushEnable;

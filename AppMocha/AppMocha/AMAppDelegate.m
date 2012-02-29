@@ -73,6 +73,39 @@
 @synthesize window = _window;
 @synthesize rootController = _rootController;
 
+- (void)startSignificantChangeUpdates {
+    if ([CLLocationManager locationServicesEnabled]) {
+        if (!locationManager)
+            locationManager = [[CLLocationManager alloc] init];
+        
+        locationManager.delegate = self;
+        [locationManager startMonitoringSignificantLocationChanges];
+    }
+    
+}
+
+- (void)stopSignificantChangeUpdates {
+    if (locationManager) {
+        [locationManager stopMonitoringSignificantLocationChanges];
+    }
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+- (void)locationManager:(CLLocationManager *)manager
+	didUpdateToLocation:(CLLocation *)newLocation
+           fromLocation:(CLLocation *)oldLocation {
+    if (NSClassFromString(@"CLGeocoder")) {
+        CLGeocoder *geocoder = [[[CLGeocoder alloc] init] autorelease];
+        [geocoder reverseGeocodeLocation:newLocation completionHandler:^(NSArray *placemarks, NSError *error) {
+            if (!error && [placemarks count] > 0) {
+                CLPlacemark *placesmark = [placemarks objectAtIndex:0];
+                [[AppBand shared] setGeoLatitude:newLocation.coordinate.latitude longitude:newLocation.coordinate.longitude country:placesmark.country countryCode:placesmark.ISOcountryCode state:placesmark.administrativeArea city:placesmark.locality district:placesmark.subLocality street:placesmark.thoroughfare zipCode:placesmark.postalCode];
+            }
+        }];
+    }
+}
+
 #pragma mark - Public
 
 - (NSString *)deviceToken {
@@ -314,12 +347,16 @@
 }
 
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
-
+    NSLog(@"%@",[error localizedDescription]);
+    [[AppBand shared] fetchPushTokenFailed];
+    [[AppBand shared] updateSettingsWithTarget:nil];
 }
 
 #pragma mark - UIApplication lifecycle
 
-- (void)dealloc {
+- (void)dealloc {    
+    [locationManager setDelegate:nil];
+    [locationManager release];
     [_window release];
     [_rootController release];
     [self setToken:nil];
@@ -338,8 +375,8 @@
     NSMutableDictionary *configOptions = [NSMutableDictionary dictionary];
     [configOptions setValue:[NSNumber numberWithBool:NO] forKey:AppBandKickOfOptionsAppBandConfigRunEnvironment];
     
-    [configOptions setValue:@"3" forKey:AppBandKickOfOptionsAppBandConfigSandboxKey];
-    [configOptions setValue:@"50b8644c-1e7c-11e1-80e7-001ec9b6dcfc" forKey:AppBandKickOfOptionsAppBandConfigSandboxSecret];
+    [configOptions setValue:@"1129" forKey:AppBandKickOfOptionsAppBandConfigSandboxKey];
+    [configOptions setValue:@"a47190c8-5deb-11e1-9e7a-001ec9b6dcfc" forKey:AppBandKickOfOptionsAppBandConfigSandboxSecret];
     [configOptions setValue:[NSNumber numberWithBool:NO] forKey:AppBandKickOfOptionsAppBandConfigHandlePushAuto];
     [configOptions setValue:[NSNumber numberWithBool:NO] forKey:AppBandKickOfOptionsAppBandConfigHandleRichAuto];
     
@@ -349,8 +386,6 @@
     
     [AppBand kickoff:[NSDictionary dictionaryWithObjectsAndKeys:configOptions, AppBandKickOfOptionsAppBandConfigKey, nil]];
     [[AppBand shared] setTagsWithK1:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Gender"] k2:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Age"] k3:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Salary"] k4:[[NSUserDefaults standardUserDefaults] objectForKey:@"MochaCity_Job"] k5:nil];
-    
-    [[ABPush shared] registerRemoteNotificationWithTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeBadge];
     [[ABPush shared] setPushDelegate:self];
     
     if ([self availableString:self.userEmail] && [self availableString:self.userPassword]) {
@@ -376,10 +411,7 @@
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    /*
-     Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
-     If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
-     */
+    [self stopSignificantChangeUpdates];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -389,7 +421,9 @@
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
+    [[ABPush shared] registerRemoteNotificationWithTypes:UIRemoteNotificationTypeAlert | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeBadge];
     [[ABPush shared] resetBadge];
+    [self startSignificantChangeUpdates];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

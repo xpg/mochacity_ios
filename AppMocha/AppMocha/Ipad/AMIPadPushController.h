@@ -37,6 +37,8 @@
     UIActivityIndicatorView *refreshSpinner;
     
     NSInteger sum;
+    
+    UIImageView *_connectMochaImageView;
 }
 
 @property(nonatomic,retain) IBOutlet UITableView *pushTableView;

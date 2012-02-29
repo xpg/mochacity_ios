@@ -303,6 +303,7 @@
 
 - (void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AppMocha_Demo_Notificaion_Receive_Key object:nil];
+    [_connectMochaImageView release];
     [reloadStr release];
     [pullStr release];
     [loadingStr release];
@@ -334,16 +335,42 @@
 
 #pragma mark - View lifecycle
 
+- (void)setConnectMoChaImage {
+    UIImage *image = nil;
+    if ([[[AppBand shared] appUser] tokenDisable] ) {
+        image = [UIImage imageNamed:@"error"];
+    }
+    else {
+        image = [UIImage imageNamed:@"accept"];
+    }
+    [_connectMochaImageView setImage:image];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self performSelector:@selector(setConnectMoChaImage) withObject:nil afterDelay:1];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     [self addPullToRefreshHeader];
     
-    
     [[NSNotificationCenter defaultCenter] removeObserver:self name:AppMocha_Demo_Notificaion_Receive_Key object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(controllerPadDidReceiveNotification:) name:AppMocha_Demo_Notificaion_Receive_Key object:nil];
     
     [self startLoading:nil number:40];
+    
+    UIImage *image = nil;
+    if ([[[AppBand shared] appUser] tokenDisable] ) {
+        image = [UIImage imageNamed:@"error"];
+    }
+    else {
+        image = [UIImage imageNamed:@"accept"];
+    }
+    _connectMochaImageView = [[UIImageView alloc] initWithImage:image];
+    [_connectMochaImageView setFrame:CGRectMake(10, 25, image.size.width, image.size.height)];
+    [self.navigationController.view addSubview:_connectMochaImageView];
 }
 
 - (void)viewDidUnload {
@@ -351,7 +378,6 @@
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
 	return YES;
 }
 

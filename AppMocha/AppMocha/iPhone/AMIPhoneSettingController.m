@@ -14,6 +14,7 @@
 #import "ABResponse.h"
 #import "AppBand+Private.h"
 #import "ABPush+Private.h"
+#import "AMIPhoneSettingPersonalController.h"
 
 
 @interface AMIPhoneSettingController() <ABUpdateSettingsProtocol>
@@ -24,6 +25,9 @@
 @implementation AMIPhoneSettingController
 
 #pragma mark - Private
+- (void)switchChange{
+    [[ABPush shared] setPushEnabled:[_pushSwitch isOn]];
+}
 
 - (void)setSaveEnable {
     [leftBarButton setEnabled:YES];
@@ -31,8 +35,6 @@
 
 - (void)savePushConfiguration {
     [leftBarButton setEnabled:NO];
-    
-    [[ABPush shared] setPushEnabled:_pushEnable];
     [[AppBand shared] updateSettingsWithTarget:self];
 }
 
@@ -115,32 +117,49 @@
 #pragma mark - UITableViewDelegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 1) {
-        if (indexPath.row == (1 + [_pushIntervals count]) && [_pushIntervals count] < 3) {
-            AMIPhoneSettingPushIntervalController *intervalController = [[AMIPhoneSettingPushIntervalController alloc] initWithNibName:@"AMIPhoneSettingPushIntervalController" bundle:nil];
-            [intervalController setPreviousController:self];
-            [self.navigationController pushViewController:intervalController animated:YES];
-            
-            [intervalController release];
-        } else if (indexPath.row > 0) {
-//            NSDictionary *interval = [_pushIntervals objectAtIndex:indexPath.row - 1];
-//            NSDate *startTime = [interval objectForKey:AppBandPushIntervalBeginTimeKey];
-//            NSDate *endTime = [interval objectForKey:AppBandPushIntervalEndTimeKey];
-//            
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0) {
+        if (!_systemSettingVC) {
+            _systemSettingVC = [[AMIPhoneSystemSettingController alloc] initWithNibName:@"AMIPhoneSystemSettingController" bundle:nil];
+        }
+        [self.navigationController pushViewController:_systemSettingVC animated:YES];
+    }
+    if (indexPath.section == 2) {
+        AMIPhoneSettingPersonalController *personalSetting = [[AMIPhoneSettingPersonalController alloc] initWithNibName:@"AMIPadSettingPersonalInfoController" bundle:nil];
+        [self.navigationController pushViewController:personalSetting animated:YES];
+        [personalSetting release]; 
+    }
+    
+    
+    
+    
+    
+//    if (indexPath.section == 1) {
+//        if (indexPath.row == (1 + [_pushIntervals count]) && [_pushIntervals count] < 3) {
 //            AMIPhoneSettingPushIntervalController *intervalController = [[AMIPhoneSettingPushIntervalController alloc] initWithNibName:@"AMIPhoneSettingPushIntervalController" bundle:nil];
-//            [intervalController setStartTime:startTime endTime:endTime index:[NSNumber numberWithInt:indexPath.row - 1]];
 //            [intervalController setPreviousController:self];
 //            [self.navigationController pushViewController:intervalController animated:YES];
 //            
 //            [intervalController release];
-        }
-    }
+//        } else if (indexPath.row > 0) {
+////            NSDictionary *interval = [_pushIntervals objectAtIndex:indexPath.row - 1];
+////            NSDate *startTime = [interval objectForKey:AppBandPushIntervalBeginTimeKey];
+////            NSDate *endTime = [interval objectForKey:AppBandPushIntervalEndTimeKey];
+////            
+////            AMIPhoneSettingPushIntervalController *intervalController = [[AMIPhoneSettingPushIntervalController alloc] initWithNibName:@"AMIPhoneSettingPushIntervalController" bundle:nil];
+////            [intervalController setStartTime:startTime endTime:endTime index:[NSNumber numberWithInt:indexPath.row - 1]];
+////            [intervalController setPreviousController:self];
+////            [self.navigationController pushViewController:intervalController animated:YES];
+////            
+////            [intervalController release];
+//        }
+//    }
 }
  
 #pragma mark - UITableViewDataSource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -160,84 +179,110 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    static NSString *cellIdentifier = @"cell";
+    UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier] autorelease];
+    }
     switch (indexPath.section) {
-        case 0: {
-            static NSString *AliasCellIdentifier = @"AliasCellIdentifier";
-            AMIPhoneSettingAliasCell *cell = (AMIPhoneSettingAliasCell *)[tableView dequeueReusableCellWithIdentifier:AliasCellIdentifier];
-            if (!cell) {
-                [[NSBundle mainBundle] loadNibNamed:@"AMIPhoneSettingAliasCell" owner:self options:NULL];
-                cell = aliasCell;
-                
-                [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-            }
-            
-            [cell setAlias:[[AppBand shared] getAlias]];
-            
-            return cell;
+        case 0:
+            [cell.textLabel setText:@"系统设置"];
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
             break;
-        }
-        case 1: {
-            if (indexPath.row == 0) {
-                static NSString *PushEnableCellIdentifier = @"PushEnableCellIdentifier";
-                AMIPhoneSettingPushEnableCell *cell = (AMIPhoneSettingPushEnableCell *)[tableView dequeueReusableCellWithIdentifier:PushEnableCellIdentifier];
-                if (!cell) {
-                    [[NSBundle mainBundle] loadNibNamed:@"AMIPhoneSettingPushEnableCell" owner:self options:NULL];
-                    cell = pushEnableCell;
-                    
-                    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-                }
-                
-                [cell setIsOn:_pushEnable];
-                
-                return cell;
-            } else if (indexPath.row == (1 + [_pushIntervals count])) {
-                static NSString *DefaultCellIdentifier = @"DefaultCellIdentifier";
-                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DefaultCellIdentifier];
-                if (!cell) {
-                    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DefaultCellIdentifier] autorelease];
-                    [cell.textLabel setTextAlignment:UITextAlignmentCenter];
-                    [cell.textLabel setText:@"添加免打扰时间"];
-                }
-                
-                return cell;
-            } else {
-//                static NSString *PushIntervalCellIdentifier = @"PushIntervalCellIdentifier";
-//                AMIPhoneSettingPushIntervalCell *cell = (AMIPhoneSettingPushIntervalCell *)[tableView dequeueReusableCellWithIdentifier:PushIntervalCellIdentifier];
+        case 1:
+            [cell.textLabel setText:@"推送设置"];
+            [cell setAccessoryView:_pushSwitch];
+            break;
+        case 2:
+            [cell.textLabel setText:@"用户信息"];
+            [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
+            break;
+        default:
+            break;
+    }
+    return cell;
+    
+    
+//    switch (indexPath.section) {
+//        case 0: {
+//            static NSString *AliasCellIdentifier = @"AliasCellIdentifier";
+//            AMIPhoneSettingAliasCell *cell = (AMIPhoneSettingAliasCell *)[tableView dequeueReusableCellWithIdentifier:AliasCellIdentifier];
+//            if (!cell) {
+//                [[NSBundle mainBundle] loadNibNamed:@"AMIPhoneSettingAliasCell" owner:self options:NULL];
+//                cell = aliasCell;
+//                
+//                [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+//            }
+//            
+//            [cell setAlias:[[AppBand shared] getAlias]];
+//            
+//            return cell;
+//            break;
+//        }
+//        case 1: {
+//            if (indexPath.row == 0) {
+//                static NSString *PushEnableCellIdentifier = @"PushEnableCellIdentifier";
+//                AMIPhoneSettingPushEnableCell *cell = (AMIPhoneSettingPushEnableCell *)[tableView dequeueReusableCellWithIdentifier:PushEnableCellIdentifier];
 //                if (!cell) {
-//                    [[NSBundle mainBundle] loadNibNamed:@"AMIPhoneSettingPushIntervalCell" owner:self options:NULL];
-//                    cell = pushIntervalCell;
+//                    [[NSBundle mainBundle] loadNibNamed:@"AMIPhoneSettingPushEnableCell" owner:self options:NULL];
+//                    cell = pushEnableCell;
+//                    
 //                    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
 //                }
 //                
-//                NSDictionary *interval = [_pushIntervals objectAtIndex:indexPath.row - 1];
-//                NSDate *startTime = [interval objectForKey:AppBandPushIntervalBeginTimeKey];
-//                NSDate *endTime = [interval objectForKey:AppBandPushIntervalEndTimeKey];
-//                [cell setStartTime:getStringFromDate(TIME_TEMPLATE_STRING, startTime) endTime:getStringFromDate(TIME_TEMPLATE_STRING, endTime)];
+//                [cell setIsOn:_pushEnable];
 //                
 //                return cell;
-                
-            }
-            break;
-        }
-    }
-    return nil;
+//            } else if (indexPath.row == (1 + [_pushIntervals count])) {
+//                static NSString *DefaultCellIdentifier = @"DefaultCellIdentifier";
+//                UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:DefaultCellIdentifier];
+//                if (!cell) {
+//                    cell = [[[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:DefaultCellIdentifier] autorelease];
+//                    [cell.textLabel setTextAlignment:UITextAlignmentCenter];
+//                    [cell.textLabel setText:@"添加免打扰时间"];
+//                }
+//                
+//                return cell;
+//            } else {
+////                static NSString *PushIntervalCellIdentifier = @"PushIntervalCellIdentifier";
+////                AMIPhoneSettingPushIntervalCell *cell = (AMIPhoneSettingPushIntervalCell *)[tableView dequeueReusableCellWithIdentifier:PushIntervalCellIdentifier];
+////                if (!cell) {
+////                    [[NSBundle mainBundle] loadNibNamed:@"AMIPhoneSettingPushIntervalCell" owner:self options:NULL];
+////                    cell = pushIntervalCell;
+////                    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+////                }
+////                
+////                NSDictionary *interval = [_pushIntervals objectAtIndex:indexPath.row - 1];
+////                NSDate *startTime = [interval objectForKey:AppBandPushIntervalBeginTimeKey];
+////                NSDate *endTime = [interval objectForKey:AppBandPushIntervalEndTimeKey];
+////                [cell setStartTime:getStringFromDate(TIME_TEMPLATE_STRING, startTime) endTime:getStringFromDate(TIME_TEMPLATE_STRING, endTime)];
+////                
+////                return cell;
+//                
+//            }
+//            break;
+//        }
+//    }
+//    return nil;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    switch (section) {
-        case 1:
-            return @"推送设置";
-            break;
-            
-        default:
-            return @"系统设置";
-            break;
-    }
-}
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    switch (section) {
+//        case 1:
+//            return @"推送设置";
+//            break;
+//            
+//        default:
+//            return @"系统设置";
+//            break;
+//    }
+//}
 
 #pragma mark - UIViewController lifecycle
 
 - (void)dealloc {
+    [_systemSettingVC release];
+    [_pushSwitch release];
     [_pushIntervals release];
     [super dealloc];
 }
@@ -252,10 +297,7 @@
 }
 
 - (void)didReceiveMemoryWarning {
-    // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
-    // Release any cached data, images, etc that aren't in use.
 }
 
 #pragma mark - View lifecycle
@@ -265,12 +307,9 @@
     
     leftBarButton = [[[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(savePushConfiguration)] autorelease];
     self.navigationItem.leftBarButtonItem = leftBarButton;
-}
-
-- (void)viewDidUnload {
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
+    _pushSwitch = [[UISwitch alloc] initWithFrame:CGRectMake(0, 0, 100, 50)];
+    [_pushSwitch addTarget:self action:@selector(switchChange) forControlEvents:UIControlEventTouchUpInside];
+    [_pushSwitch setOn:[[ABPush shared] getPushEnabled]];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {

@@ -331,6 +331,21 @@
 }
 
 #pragma mark - View lifecycle
+- (void)setConnectMoChaImage {
+    UIImage *image = nil;
+    if ([[[AppBand shared] appUser] tokenDisable] ) {
+        image = [UIImage imageNamed:@"error"];
+    }
+    else {
+        image = [UIImage imageNamed:@"accept"];
+    }
+    [_connectMochaImageView setImage:image];
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self performSelector:@selector(setConnectMoChaImage) withObject:nil afterDelay:1];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -342,6 +357,18 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(controllerDidReceiveNotification:) name:AppMocha_Demo_Notificaion_Receive_Key object:nil];
     
     [self startLoading:nil number:20];
+    
+    UIImage *image = nil;
+    if ([[[AppBand shared] appUser] tokenDisable] ) {
+        image = [UIImage imageNamed:@"error"];
+    }
+    else {
+        image = [UIImage imageNamed:@"accept"];
+    }
+    _connectMochaImageView = [[UIImageView alloc] initWithImage:image];
+    [_connectMochaImageView setFrame:CGRectMake(10, 25, image.size.width, image.size.height)];
+    [self.navigationController.view addSubview:_connectMochaImageView];
+
 }
 
 - (void)viewDidUnload {
